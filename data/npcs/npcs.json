@@ -1,0 +1,50 @@
+[
+  {
+    "id": "blacksmith_01",
+    "npc_id": "blacksmith_01",
+    "name": "Tormund the Smith",
+    "type": "shopkeeper",
+    "position": {"chunk_x": 0, "chunk_y": 1, "tile_x": 15, "tile_y": 10},
+    "heading": "south",
+    "mesh": "res://assets/models/npcs/blacksmith.glb",
+    "dialogue": ["Welcome! Need something forged?", "I have the finest blades in Millhaven."],
+    "shop_inventory": ["iron_sword_01", "steel_sword_01", "steel_shield_01", "iron_helmet_01"],
+    "quests": ["quest_forge_sword"]
+  },
+  {
+    "id": "merchant_01",
+    "npc_id": "merchant_01",
+    "name": "Elara the Merchant",
+    "type": "shopkeeper",
+    "position": {"chunk_x": 0, "chunk_y": 1, "tile_x": 20, "tile_y": 12},
+    "heading": "south",
+    "mesh": "res://assets/models/npcs/merchant.glb",
+    "dialogue": ["Looking to buy or sell?", "I deal in potions and supplies."],
+    "shop_inventory": ["health_potion", "mana_potion", "wooden_bow_01", "leather_armor_01"],
+    "quests": []
+  },
+  {
+    "id": "quest_giver_01",
+    "npc_id": "quest_giver_01",
+    "name": "Captain Aldwin",
+    "type": "quest_giver",
+    "position": {"chunk_x": 0, "chunk_y": 1, "tile_x": 10, "tile_y": 8},
+    "heading": "east",
+    "mesh": "res://assets/models/npcs/captain.glb",
+    "dialogue": ["Hail, adventurer! The plains are overrun with goblins.", "Will you help us drive them back?"],
+    "shop_inventory": [],
+    "quests": ["quest_goblin_hunt", "quest_herb_gathering"]
+  },
+  {
+    "id": "banker_01",
+    "npc_id": "banker_01",
+    "name": "Gideon the Banker",
+    "type": "banker",
+    "position": {"chunk_x": 0, "chunk_y": 1, "tile_x": 25, "tile_y": 10},
+    "heading": "west",
+    "mesh": "res://assets/models/npcs/banker.glb",
+    "dialogue": ["Your valuables are safe with me.", "Deposit or withdraw?"],
+    "shop_inventory": [],
+    "quests": []
+  }
+]

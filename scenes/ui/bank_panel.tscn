@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6bank_panel"]
+
+[ext_resource type="Script" path="res://scenes/ui/bank_panel.gd" id="1_script"]
+
+[node name="BankPanel" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 150.0
+offset_top = 100.0
+offset_right = 530.0
+offset_bottom = 460.0
+script = ExtResource("1_script")
+
+[node name="PanelBG" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Bank"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 6
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BottomBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 32)
+
+[node name="InfoLabel" type="Label" parent="MarginContainer/VBoxContainer/BottomBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Click a slot to withdraw"
+
+[node name="CloseButton" type="Button" parent="MarginContainer/VBoxContainer/BottomBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "Close"

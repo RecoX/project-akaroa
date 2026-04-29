@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6guild_panel"]
+
+[ext_resource type="Script" path="res://scenes/ui/guild_panel.gd" id="1_script"]
+
+[node name="GuildPanel" type="PanelContainer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Guild"
+horizontal_alignment = 1
+label_settings = null
+
+[node name="CreateSection" type="VBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="CreateLabel" type="Label" parent="VBox/CreateSection"]
+layout_mode = 2
+text = "Create a Guild"
+
+[node name="GuildNameInput" type="LineEdit" parent="VBox/CreateSection"]
+layout_mode = 2
+placeholder_text = "Guild Name"
+
+[node name="GuildTagInput" type="LineEdit" parent="VBox/CreateSection"]
+layout_mode = 2
+placeholder_text = "Tag (e.g. ABC)"
+max_length = 5
+
+[node name="CreateButton" type="Button" parent="VBox/CreateSection"]
+layout_mode = 2
+text = "Create Guild"
+
+[node name="InfoSection" type="VBoxContainer" parent="VBox"]
+visible = false
+layout_mode = 2
+
+[node name="GuildTitleLabel" type="Label" parent="VBox/InfoSection"]
+layout_mode = 2
+text = "Guild Name <TAG>"
+horizontal_alignment = 1
+
+[node name="NewsBoardLabel" type="Label" parent="VBox/InfoSection"]
+layout_mode = 2
+text = "News Board"
+
+[node name="NewsBoard" type="ItemList" parent="VBox/InfoSection"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 100)
+
+[node name="MembersLabel" type="Label" parent="VBox/InfoSection"]
+layout_mode = 2
+text = "Members"
+
+[node name="MemberList" type="ItemList" parent="VBox/InfoSection"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 120)
+
+[node name="AllianceLabel" type="Label" parent="VBox/InfoSection"]
+layout_mode = 2
+text = "Alliances: None"

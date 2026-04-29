@@ -1,0 +1,101 @@
+[gd_scene load_steps=28 format=3 uid="uid://c6gameplay_scene"]
+
+[ext_resource type="Script" path="res://scenes/world/gameplay_scene.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://c6world_manager" path="res://scenes/world/world_manager.tscn" id="2_world_manager"]
+[ext_resource type="Script" path="res://scripts/game_camera.gd" id="3_camera"]
+[ext_resource type="Script" path="res://scripts/tile_engine.gd" id="4_tile_engine"]
+[ext_resource type="Script" path="res://scripts/character_renderer.gd" id="5_char_renderer"]
+[ext_resource type="Script" path="res://scripts/ui_manager.gd" id="6_ui_manager"]
+[ext_resource type="PackedScene" uid="uid://c6hud_scene" path="res://scenes/ui/hud.tscn" id="7_hud"]
+[ext_resource type="PackedScene" uid="uid://c6hotkey_bar" path="res://scenes/ui/hotkey_bar.tscn" id="8_hotkey_bar"]
+[ext_resource type="PackedScene" uid="uid://c6inventory_panel" path="res://scenes/ui/inventory_panel.tscn" id="9_inventory_panel"]
+[ext_resource type="PackedScene" uid="uid://c6spell_panel" path="res://scenes/ui/spell_panel.tscn" id="10_spell_panel"]
+[ext_resource type="Script" path="res://scripts/combat_system.gd" id="11_combat_system"]
+[ext_resource type="Script" path="res://scripts/inventory_manager.gd" id="12_inventory_manager"]
+[ext_resource type="Script" path="res://scripts/spell_manager.gd" id="13_spell_manager"]
+[ext_resource type="Script" path="res://scripts/chat_system.gd" id="14_chat_system"]
+[ext_resource type="PackedScene" uid="uid://c6chat_console" path="res://scenes/ui/chat_console.tscn" id="15_chat_console"]
+[ext_resource type="Script" path="res://scripts/guild_manager.gd" id="16_guild_manager"]
+[ext_resource type="Script" path="res://scripts/reputation_system.gd" id="17_reputation_system"]
+[ext_resource type="Script" path="res://scripts/party_system.gd" id="18_party_system"]
+[ext_resource type="Script" path="res://scripts/skill_system.gd" id="19_skill_system"]
+[ext_resource type="Script" path="res://scripts/quest_manager.gd" id="20_quest_manager"]
+[ext_resource type="Script" path="res://scripts/trade_system.gd" id="21_trade_system"]
+[ext_resource type="Script" path="res://scripts/crafting_system.gd" id="22_crafting_system"]
+[ext_resource type="PackedScene" uid="uid://c6guild_panel" path="res://scenes/ui/guild_panel.tscn" id="23_guild_panel"]
+[ext_resource type="PackedScene" uid="uid://c6skills_panel" path="res://scenes/ui/skills_panel.tscn" id="24_skills_panel"]
+[ext_resource type="PackedScene" uid="uid://c6char_stats_panel" path="res://scenes/ui/character_stats_panel.tscn" id="25_char_stats_panel"]
+[ext_resource type="PackedScene" uid="uid://c6minimap" path="res://scenes/ui/minimap.tscn" id="26_minimap"]
+[ext_resource type="PackedScene" uid="uid://c6settings_panel" path="res://scenes/ui/settings_panel.tscn" id="27_settings_panel"]
+
+[node name="GameplayScene" type="Node3D"]
+script = ExtResource("1_script")
+
+[node name="WorldManager" parent="." instance=ExtResource("2_world_manager")]
+
+[node name="CharacterContainer" type="Node3D" parent="."]
+
+[node name="GameCamera" type="Camera3D" parent="."]
+script = ExtResource("3_camera")
+
+[node name="TileEngine" type="Node" parent="."]
+script = ExtResource("4_tile_engine")
+
+[node name="CharacterRenderer" type="Node" parent="."]
+script = ExtResource("5_char_renderer")
+
+[node name="CombatSystem" type="Node" parent="."]
+script = ExtResource("11_combat_system")
+
+[node name="SpellManager" type="Node" parent="."]
+script = ExtResource("13_spell_manager")
+
+[node name="InventoryManager" type="Node" parent="."]
+script = ExtResource("12_inventory_manager")
+
+[node name="CraftingSystem" type="Node" parent="."]
+script = ExtResource("22_crafting_system")
+
+[node name="ChatSystem" type="Node" parent="."]
+script = ExtResource("14_chat_system")
+
+[node name="QuestManager" type="Node" parent="."]
+script = ExtResource("20_quest_manager")
+
+[node name="GuildManager" type="Node" parent="."]
+script = ExtResource("16_guild_manager")
+
+[node name="ReputationSystem" type="Node" parent="."]
+script = ExtResource("17_reputation_system")
+
+[node name="TradeSystem" type="Node" parent="."]
+script = ExtResource("21_trade_system")
+
+[node name="PartySystem" type="Node" parent="."]
+script = ExtResource("18_party_system")
+
+[node name="SkillSystem" type="Node" parent="."]
+script = ExtResource("19_skill_system")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+script = ExtResource("6_ui_manager")
+
+[node name="HUD" parent="UILayer" instance=ExtResource("7_hud")]
+
+[node name="HotkeyBar" parent="UILayer" instance=ExtResource("8_hotkey_bar")]
+
+[node name="InventoryPanel" parent="UILayer" instance=ExtResource("9_inventory_panel")]
+
+[node name="SpellPanel" parent="UILayer" instance=ExtResource("10_spell_panel")]
+
+[node name="ChatConsole" parent="UILayer" instance=ExtResource("15_chat_console")]
+
+[node name="GuildPanel" parent="UILayer" instance=ExtResource("23_guild_panel")]
+
+[node name="SkillsPanel" parent="UILayer" instance=ExtResource("24_skills_panel")]
+
+[node name="CharacterStatsPanel" parent="UILayer" instance=ExtResource("25_char_stats_panel")]
+
+[node name="Minimap" parent="UILayer" instance=ExtResource("26_minimap")]
+
+[node name="SettingsPanel" parent="UILayer" instance=ExtResource("27_settings_panel")]

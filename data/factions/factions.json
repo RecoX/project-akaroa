@@ -1,0 +1,29 @@
+[
+  {
+    "id": "royal_guard",
+    "name": "Royal Guard",
+    "description": "The sworn protectors of the realm, upholding law and order.",
+    "leader": "Commander Voss",
+    "headquarters": "Millhaven Town",
+    "reputation_levels": ["hostile", "unfriendly", "neutral", "friendly", "honored", "exalted"],
+    "icon": "res://assets/icons/faction_royal_guard.png"
+  },
+  {
+    "id": "shadow_guild",
+    "name": "Shadow Guild",
+    "description": "A secretive organization operating from the shadows, dealing in information and subterfuge.",
+    "leader": "The Whisper",
+    "headquarters": "Shadow Caverns",
+    "reputation_levels": ["hostile", "unfriendly", "neutral", "friendly", "honored", "exalted"],
+    "icon": "res://assets/icons/faction_shadow_guild.png"
+  },
+  {
+    "id": "merchants_league",
+    "name": "Merchants League",
+    "description": "A powerful trade consortium controlling commerce across the land.",
+    "leader": "Guildmaster Theron",
+    "headquarters": "Millhaven Town",
+    "reputation_levels": ["hostile", "unfriendly", "neutral", "friendly", "honored", "exalted"],
+    "icon": "res://assets/icons/faction_merchants_league.png"
+  }
+]

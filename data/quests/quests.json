@@ -1,0 +1,52 @@
+[
+  {
+    "id": "quest_forge_sword",
+    "quest_id": "quest_forge_sword",
+    "title": "The Smith's Request",
+    "description": "Tormund needs iron ore to forge a new blade.",
+    "giver_npc": "blacksmith_01",
+    "objectives": [
+      {"type": "collect", "item_id": "iron_ore", "quantity": 5, "current": 0},
+      {"type": "kill", "enemy_id": "goblin_01", "quantity": 3, "current": 0}
+    ],
+    "rewards": {
+      "xp": 200,
+      "gold": 100,
+      "items": ["iron_sword_01"]
+    },
+    "level_requirement": 3
+  },
+  {
+    "id": "quest_goblin_hunt",
+    "quest_id": "quest_goblin_hunt",
+    "title": "Goblin Menace",
+    "description": "Captain Aldwin wants you to thin the goblin ranks in the Verdant Plains.",
+    "giver_npc": "quest_giver_01",
+    "objectives": [
+      {"type": "kill", "enemy_id": "goblin_01", "quantity": 10, "current": 0},
+      {"type": "collect", "item_id": "goblin_ear", "quantity": 5, "current": 0}
+    ],
+    "rewards": {
+      "xp": 350,
+      "gold": 200,
+      "items": ["steel_sword_01"]
+    },
+    "level_requirement": 5
+  },
+  {
+    "id": "quest_herb_gathering",
+    "quest_id": "quest_herb_gathering",
+    "title": "Herbs for the Healer",
+    "description": "The town healer needs medicinal herbs from the Oakwood Forest.",
+    "giver_npc": "quest_giver_01",
+    "objectives": [
+      {"type": "collect", "item_id": "wood_plank", "quantity": 8, "current": 0}
+    ],
+    "rewards": {
+      "xp": 150,
+      "gold": 75,
+      "items": ["health_potion"]
+    },
+    "level_requirement": 2
+  }
+]

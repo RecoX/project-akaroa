@@ -1,0 +1,121 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6hud_scene"]
+
+[ext_resource type="Script" path="res://scenes/ui/hud.gd" id="1_script"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="TopLeft" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 260.0
+offset_bottom = 110.0
+mouse_filter = 2
+
+[node name="VitalBars" type="VBoxContainer" parent="TopLeft"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HPRow" type="HBoxContainer" parent="TopLeft/VitalBars"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HPBar" type="ProgressBar" parent="TopLeft/VitalBars/HPRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 100.0
+value = 100.0
+show_percentage = false
+
+[node name="HPLabel" type="Label" parent="TopLeft/VitalBars/HPRow"]
+layout_mode = 2
+text = "100 / 100"
+
+[node name="ManaRow" type="HBoxContainer" parent="TopLeft/VitalBars"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ManaBar" type="ProgressBar" parent="TopLeft/VitalBars/ManaRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 50.0
+value = 50.0
+show_percentage = false
+
+[node name="ManaLabel" type="Label" parent="TopLeft/VitalBars/ManaRow"]
+layout_mode = 2
+text = "50 / 50"
+
+[node name="XPRow" type="HBoxContainer" parent="TopLeft/VitalBars"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="XPBar" type="ProgressBar" parent="TopLeft/VitalBars/XPRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 100.0
+value = 0.0
+show_percentage = false
+
+[node name="LevelLabel" type="Label" parent="TopLeft/VitalBars/XPRow"]
+layout_mode = 2
+text = "Lv 1"
+
+[node name="TopRight" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 80.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="GoldLabel" type="Label" parent="TopRight"]
+layout_mode = 2
+text = "Gold: 0"
+horizontal_alignment = 2
+
+[node name="ZoneLabel" type="Label" parent="TopRight"]
+layout_mode = 2
+text = "Unknown Zone"
+horizontal_alignment = 2
+
+[node name="CoordinateLabel" type="Label" parent="TopRight"]
+layout_mode = 2
+text = "(0, 0)"
+horizontal_alignment = 2
+
+[node name="BottomLeft" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -70.0
+offset_right = 310.0
+offset_bottom = -10.0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="BuffBar" type="HBoxContainer" parent="BottomLeft"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="DebuffBar" type="HBoxContainer" parent="BottomLeft"]
+layout_mode = 2
+mouse_filter = 2

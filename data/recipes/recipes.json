@@ -1,0 +1,39 @@
+[
+  {
+    "id": "recipe_iron_sword",
+    "recipe_id": "recipe_iron_sword",
+    "discipline": "blacksmithing",
+    "name": "Forge Iron Sword",
+    "materials": [
+      {"item_id": "iron_ore", "quantity": 3},
+      {"item_id": "wood_plank", "quantity": 1}
+    ],
+    "result_item": "iron_sword_01",
+    "skill_requirement": 20,
+    "success_base_chance": 0.8
+  },
+  {
+    "id": "recipe_health_potion",
+    "recipe_id": "recipe_health_potion",
+    "discipline": "alchemy",
+    "name": "Brew Health Potion",
+    "materials": [
+      {"item_id": "wood_plank", "quantity": 2}
+    ],
+    "result_item": "health_potion",
+    "skill_requirement": 10,
+    "success_base_chance": 0.9
+  },
+  {
+    "id": "recipe_wooden_bow",
+    "recipe_id": "recipe_wooden_bow",
+    "discipline": "carpentry",
+    "name": "Craft Wooden Bow",
+    "materials": [
+      {"item_id": "wood_plank", "quantity": 3}
+    ],
+    "result_item": "wooden_bow_01",
+    "skill_requirement": 15,
+    "success_base_chance": 0.85
+  }
+]

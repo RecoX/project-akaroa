@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6world_manager"]
+
+[ext_resource type="Script" path="res://scenes/world/world_manager.gd" id="1_script"]
+
+[node name="WorldManager" type="Node3D"]
+script = ExtResource("1_script")
+
+[node name="ChunkContainer" type="Node3D" parent="."]
+
+[node name="WeatherParticles" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 200
+lifetime = 2.0
+visibility_aabb = AABB(-50, -10, -50, 100, 20, 100)
+
+[node name="EnvironmentNode" type="WorldEnvironment" parent="."]

@@ -1,0 +1,157 @@
+[
+  {
+    "id": "player_001",
+    "name": "Aldric",
+    "guild_tag": "KNG",
+    "race": "human",
+    "class": "warrior",
+    "gender": "male",
+    "level": 15,
+    "xp": 12500,
+    "xp_to_next": 20000,
+    "hp": 350,
+    "max_hp": 350,
+    "mana": 100,
+    "max_mana": 100,
+    "gold": 5000,
+    "position": {"x": 512, "y": 512},
+    "heading": "south",
+    "alignment": "citizen",
+    "faction": "royal_guard",
+    "attributes": {
+      "strength": 18,
+      "agility": 12,
+      "intelligence": 8,
+      "constitution": 16,
+      "charisma": 10
+    },
+    "equipment": {
+      "weapon": "iron_sword_01",
+      "shield": "wooden_shield_01",
+      "helmet": "",
+      "armor": "leather_armor_01",
+      "backpack": ""
+    },
+    "appearance": {
+      "body_mesh": "res://assets/models/characters/human_male.glb",
+      "skin_color": [0.85, 0.7, 0.55],
+      "hair_style": "short",
+      "hair_color": [0.3, 0.2, 0.1]
+    },
+    "inventory": [
+      {"slot": 0, "item_id": "health_potion", "quantity": 5},
+      {"slot": 1, "item_id": "mana_potion", "quantity": 3},
+      {"slot": 2, "item_id": "iron_ore", "quantity": 8}
+    ],
+    "learned_spells": [],
+    "skills": {
+      "swordsmanship": 45,
+      "defense": 38,
+      "mining": 22,
+      "blacksmithing": 15
+    }
+  },
+  {
+    "id": "player_002",
+    "name": "Lyria",
+    "guild_tag": "ARC",
+    "race": "elf",
+    "class": "mage",
+    "gender": "female",
+    "level": 12,
+    "xp": 8200,
+    "xp_to_next": 15000,
+    "hp": 180,
+    "max_hp": 180,
+    "mana": 320,
+    "max_mana": 320,
+    "gold": 3200,
+    "position": {"x": 520, "y": 510},
+    "heading": "east",
+    "alignment": "citizen",
+    "faction": "merchants_league",
+    "attributes": {
+      "strength": 6,
+      "agility": 14,
+      "intelligence": 22,
+      "constitution": 8,
+      "charisma": 14
+    },
+    "equipment": {
+      "weapon": "oak_staff_01",
+      "shield": "",
+      "helmet": "",
+      "armor": "",
+      "backpack": ""
+    },
+    "appearance": {
+      "body_mesh": "res://assets/models/characters/elf_female.glb",
+      "skin_color": [0.9, 0.82, 0.72],
+      "hair_style": "long",
+      "hair_color": [0.9, 0.85, 0.6]
+    },
+    "inventory": [
+      {"slot": 0, "item_id": "mana_potion", "quantity": 10},
+      {"slot": 1, "item_id": "health_potion", "quantity": 3}
+    ],
+    "learned_spells": ["fireball_01", "heal_01", "ice_shard_01"],
+    "skills": {
+      "elemental_magic": 52,
+      "restoration_magic": 30,
+      "alchemy": 25,
+      "meditation": 40
+    }
+  },
+  {
+    "id": "player_003",
+    "name": "Shade",
+    "guild_tag": "",
+    "race": "dark_elf",
+    "class": "assassin",
+    "gender": "male",
+    "level": 18,
+    "xp": 22000,
+    "xp_to_next": 30000,
+    "hp": 240,
+    "max_hp": 240,
+    "mana": 150,
+    "max_mana": 150,
+    "gold": 8500,
+    "position": {"x": 505, "y": 518},
+    "heading": "north",
+    "alignment": "criminal",
+    "faction": "shadow_guild",
+    "attributes": {
+      "strength": 14,
+      "agility": 24,
+      "intelligence": 12,
+      "constitution": 10,
+      "charisma": 6
+    },
+    "equipment": {
+      "weapon": "steel_sword_01",
+      "shield": "",
+      "helmet": "",
+      "armor": "leather_armor_01",
+      "backpack": ""
+    },
+    "appearance": {
+      "body_mesh": "res://assets/models/characters/dark_elf_male.glb",
+      "skin_color": [0.35, 0.3, 0.4],
+      "hair_style": "ponytail",
+      "hair_color": [0.9, 0.9, 0.95]
+    },
+    "inventory": [
+      {"slot": 0, "item_id": "health_potion", "quantity": 8},
+      {"slot": 1, "item_id": "mana_potion", "quantity": 5},
+      {"slot": 2, "item_id": "goblin_ear", "quantity": 12}
+    ],
+    "learned_spells": ["ice_shard_01"],
+    "skills": {
+      "swordsmanship": 60,
+      "stealth": 55,
+      "lockpicking": 40,
+      "alchemy": 18
+    }
+  }
+]

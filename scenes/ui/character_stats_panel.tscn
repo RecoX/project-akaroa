@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6char_stats_panel"]
+
+[ext_resource type="Script" path="res://scenes/ui/character_stats_panel.gd" id="1_script"]
+
+[node name="CharacterStatsPanel" type="PanelContainer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -200.0
+offset_right = 180.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Character Stats"
+horizontal_alignment = 1
+
+[node name="NameLabel" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Player Name"
+
+[node name="FactionLabel" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Faction: None"
+
+[node name="ReputationLabel" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Reputation: 0"
+
+[node name="AlignmentLabel" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Alignment: Citizen"
+
+[node name="Separator" type="HSeparator" parent="VBox"]
+layout_mode = 2
+
+[node name="PvPTitle" type="Label" parent="VBox"]
+layout_mode = 2
+text = "— PvP Statistics —"
+horizontal_alignment = 1
+
+[node name="PvPSection" type="VBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="KillsLabel" type="Label" parent="VBox/PvPSection"]
+layout_mode = 2
+text = "Kills: 0"
+
+[node name="DeathsLabel" type="Label" parent="VBox/PvPSection"]
+layout_mode = 2
+text = "Deaths: 0"
+
+[node name="StreakLabel" type="Label" parent="VBox/PvPSection"]
+layout_mode = 2
+text = "Best Streak: 0"

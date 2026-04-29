@@ -1,0 +1,71 @@
+[
+  {
+    "id": "verdant_plains",
+    "zone_id": "verdant_plains",
+    "name": "Verdant Plains",
+    "music_track": "res://assets/audio/music/verdant_plains.ogg",
+    "weather_default": "clear",
+    "ambient_sound": "res://assets/audio/ambient/plains_wind.ogg",
+    "lighting_profile": {
+      "day_ambient": [1.0, 1.0, 0.95],
+      "night_ambient": [0.15, 0.15, 0.3],
+      "dungeon_ambient": [0.1, 0.08, 0.08]
+    },
+    "is_safe_zone": false,
+    "is_dungeon": false,
+    "weather_schedule": [
+      {"start_hour": 14.0, "end_hour": 16.0, "type": "rain"},
+      {"start_hour": 22.0, "end_hour": 4.0, "type": "fog"}
+    ]
+  },
+  {
+    "id": "oakwood_forest",
+    "zone_id": "oakwood_forest",
+    "name": "Oakwood Forest",
+    "music_track": "res://assets/audio/music/oakwood_forest.ogg",
+    "weather_default": "clear",
+    "ambient_sound": "res://assets/audio/ambient/forest_birds.ogg",
+    "lighting_profile": {
+      "day_ambient": [0.8, 0.9, 0.7],
+      "night_ambient": [0.1, 0.12, 0.2],
+      "dungeon_ambient": [0.1, 0.08, 0.08]
+    },
+    "is_safe_zone": false,
+    "is_dungeon": false,
+    "weather_schedule": [
+      {"start_hour": 18.0, "end_hour": 20.0, "type": "rain"}
+    ]
+  },
+  {
+    "id": "millhaven_town",
+    "zone_id": "millhaven_town",
+    "name": "Millhaven Town",
+    "music_track": "res://assets/audio/music/millhaven_town.ogg",
+    "weather_default": "clear",
+    "ambient_sound": "res://assets/audio/ambient/town_bustle.ogg",
+    "lighting_profile": {
+      "day_ambient": [1.0, 1.0, 1.0],
+      "night_ambient": [0.2, 0.2, 0.35],
+      "dungeon_ambient": [0.1, 0.08, 0.08]
+    },
+    "is_safe_zone": true,
+    "is_dungeon": false,
+    "weather_schedule": []
+  },
+  {
+    "id": "shadow_caverns",
+    "zone_id": "shadow_caverns",
+    "name": "Shadow Caverns",
+    "music_track": "res://assets/audio/music/shadow_caverns.ogg",
+    "weather_default": "none",
+    "ambient_sound": "res://assets/audio/ambient/cave_drip.ogg",
+    "lighting_profile": {
+      "day_ambient": [0.1, 0.08, 0.08],
+      "night_ambient": [0.1, 0.08, 0.08],
+      "dungeon_ambient": [0.1, 0.08, 0.08]
+    },
+    "is_safe_zone": false,
+    "is_dungeon": true,
+    "weather_schedule": []
+  }
+]

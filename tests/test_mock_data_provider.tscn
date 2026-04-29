@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0test_mock_data"]
+
+[ext_resource type="Script" path="res://tests/test_mock_data_provider.gd" id="1_test"]
+
+[node name="TestMockDataProvider" type="Node"]
+script = ExtResource("1_test")

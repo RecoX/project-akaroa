@@ -1,0 +1,145 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6settings_panel"]
+
+[ext_resource type="Script" path="res://scenes/ui/settings_panel.gd" id="1_script"]
+
+[node name="SettingsPanel" type="PanelContainer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -300.0
+offset_right = 250.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="AudioSection" type="VBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="AudioLabel" type="Label" parent="VBox/AudioSection"]
+layout_mode = 2
+text = "— Audio —"
+horizontal_alignment = 1
+
+[node name="MusicRow" type="HBoxContainer" parent="VBox/AudioSection"]
+layout_mode = 2
+
+[node name="MusicLabel" type="Label" parent="VBox/AudioSection/MusicRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 0)
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="VBox/AudioSection/MusicRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SFXRow" type="HBoxContainer" parent="VBox/AudioSection"]
+layout_mode = 2
+
+[node name="SFXLabel" type="Label" parent="VBox/AudioSection/SFXRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 0)
+text = "Effects"
+
+[node name="SFXSlider" type="HSlider" parent="VBox/AudioSection/SFXRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="FootstepRow" type="HBoxContainer" parent="VBox/AudioSection"]
+layout_mode = 2
+
+[node name="FootstepLabel" type="Label" parent="VBox/AudioSection/FootstepRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 0)
+text = "Footsteps"
+
+[node name="FootstepSlider" type="HSlider" parent="VBox/AudioSection/FootstepRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="AmbientRow" type="HBoxContainer" parent="VBox/AudioSection"]
+layout_mode = 2
+
+[node name="AmbientLabel" type="Label" parent="VBox/AudioSection/AmbientRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 0)
+text = "Ambient"
+
+[node name="AmbientSlider" type="HSlider" parent="VBox/AudioSection/AmbientRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Separator1" type="HSeparator" parent="VBox"]
+layout_mode = 2
+
+[node name="GraphicsSection" type="VBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="GraphicsLabel" type="Label" parent="VBox/GraphicsSection"]
+layout_mode = 2
+text = "— Graphics —"
+horizontal_alignment = 1
+
+[node name="FullscreenCheck" type="CheckButton" parent="VBox/GraphicsSection"]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="ResLabel" type="Label" parent="VBox/GraphicsSection"]
+layout_mode = 2
+text = "Resolution"
+
+[node name="ResolutionOption" type="OptionButton" parent="VBox/GraphicsSection"]
+layout_mode = 2
+
+[node name="QualLabel" type="Label" parent="VBox/GraphicsSection"]
+layout_mode = 2
+text = "Quality"
+
+[node name="QualityOption" type="OptionButton" parent="VBox/GraphicsSection"]
+layout_mode = 2
+
+[node name="Separator2" type="HSeparator" parent="VBox"]
+layout_mode = 2
+
+[node name="KeybindSection" type="VBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="KeybindLabel" type="Label" parent="VBox/KeybindSection"]
+layout_mode = 2
+text = "— Keybindings —"
+horizontal_alignment = 1
+
+[node name="KeybindList" type="VBoxContainer" parent="VBox/KeybindSection"]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="VBox"]
+layout_mode = 2
+text = "Close"

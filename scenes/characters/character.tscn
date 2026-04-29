@@ -1,0 +1,109 @@
+[gd_scene load_steps=7 format=3 uid="uid://character_scene"]
+
+[ext_resource type="Script" path="res://scenes/characters/character.gd" id="1_script"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1"]
+radius = 4.0
+height = 14.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1"]
+albedo_color = Color(0.6, 0.5, 0.4, 1)
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_1"]
+
+[sub_resource type="Animation" id="Animation_RESET"]
+resource_name = "RESET"
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1"]
+_data = {
+"RESET": SubResource("Animation_RESET")
+}
+
+[node name="Character" type="CharacterBody3D"]
+script = ExtResource("1_script")
+
+[node name="CharacterModel" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+mesh = SubResource("CapsuleMesh_1")
+material_override = SubResource("StandardMaterial3D_1")
+
+[node name="Skeleton3D" type="Skeleton3D" parent="CharacterModel"]
+
+[node name="weapon_slot" type="BoneAttachment3D" parent="CharacterModel/Skeleton3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 4, 0)
+
+[node name="shield_slot" type="BoneAttachment3D" parent="CharacterModel/Skeleton3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 4, 0)
+
+[node name="helmet_slot" type="BoneAttachment3D" parent="CharacterModel/Skeleton3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_1")
+anim_player = NodePath("../AnimationPlayer")
+active = false
+
+[node name="OverheadUI" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(200, 60)
+render_target_update_mode = 4
+
+[node name="OverheadControl" type="Control" parent="OverheadUI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="OverheadUI/OverheadControl"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 20.0
+grow_horizontal = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "CharacterName"
+
+[node name="HPBar" type="ProgressBar" parent="OverheadUI/OverheadControl"]
+layout_mode = 1
+offset_top = 22.0
+offset_right = 200.0
+offset_bottom = 34.0
+max_value = 100.0
+value = 100.0
+show_percentage = false
+
+[node name="ShieldBar" type="ProgressBar" parent="OverheadUI/OverheadControl"]
+layout_mode = 1
+offset_top = 36.0
+offset_right = 200.0
+offset_bottom = 42.0
+max_value = 100.0
+value = 0.0
+show_percentage = false
+
+[node name="ChatBubble" type="RichTextLabel" parent="OverheadUI/OverheadControl"]
+visible = false
+layout_mode = 1
+offset_top = 44.0
+offset_right = 200.0
+offset_bottom = 60.0
+text = ""
+fit_content = true
+
+[node name="OverheadSprite" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18, 0)
+billboard = 1
+texture_filter = 0
+pixel_size = 0.1
+
+[node name="EffectAttachPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0)

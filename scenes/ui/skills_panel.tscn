@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6skills_panel"]
+
+[ext_resource type="Script" path="res://scenes/ui/skills_panel.gd" id="1_script"]
+
+[node name="SkillsPanel" type="PanelContainer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Skills & Attributes"
+horizontal_alignment = 1
+
+[node name="AttributesSection" type="VBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="AttrLabel" type="Label" parent="VBox/AttributesSection"]
+layout_mode = 2
+text = "— Attributes —"
+horizontal_alignment = 1
+
+[node name="CombatSection" type="VBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="CombatLabel" type="Label" parent="VBox/CombatSection"]
+layout_mode = 2
+text = "— Combat —"
+horizontal_alignment = 1
+
+[node name="MagicSection" type="VBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="MagicLabel" type="Label" parent="VBox/MagicSection"]
+layout_mode = 2
+text = "— Magic —"
+horizontal_alignment = 1
+
+[node name="TradeSection" type="VBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="TradeLabel" type="Label" parent="VBox/TradeSection"]
+layout_mode = 2
+text = "— Trade —"
+horizontal_alignment = 1

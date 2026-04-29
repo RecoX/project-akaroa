@@ -1,0 +1,55 @@
+[
+  {
+    "id": "goblin_01",
+    "enemy_id": "goblin_01",
+    "name": "Goblin Scout",
+    "level": 5,
+    "hp": 80,
+    "max_hp": 80,
+    "damage_min": 5,
+    "damage_max": 12,
+    "attack_speed": 1.5,
+    "defense": 3,
+    "mesh": "res://assets/models/enemies/goblin.glb",
+    "loot_table": [
+      {"item_id": "gold_coins", "quantity_min": 5, "quantity_max": 20, "drop_chance": 1.0},
+      {"item_id": "goblin_ear", "quantity_min": 1, "quantity_max": 1, "drop_chance": 0.5}
+    ],
+    "xp_reward": 50
+  },
+  {
+    "id": "skeleton_01",
+    "enemy_id": "skeleton_01",
+    "name": "Skeleton Warrior",
+    "level": 8,
+    "hp": 120,
+    "max_hp": 120,
+    "damage_min": 8,
+    "damage_max": 18,
+    "attack_speed": 1.8,
+    "defense": 6,
+    "mesh": "res://assets/models/enemies/skeleton.glb",
+    "loot_table": [
+      {"item_id": "gold_coins", "quantity_min": 10, "quantity_max": 35, "drop_chance": 1.0},
+      {"item_id": "iron_ore", "quantity_min": 1, "quantity_max": 2, "drop_chance": 0.3}
+    ],
+    "xp_reward": 85
+  },
+  {
+    "id": "wolf_01",
+    "enemy_id": "wolf_01",
+    "name": "Dire Wolf",
+    "level": 6,
+    "hp": 95,
+    "max_hp": 95,
+    "damage_min": 7,
+    "damage_max": 14,
+    "attack_speed": 1.2,
+    "defense": 4,
+    "mesh": "res://assets/models/enemies/wolf.glb",
+    "loot_table": [
+      {"item_id": "gold_coins", "quantity_min": 3, "quantity_max": 12, "drop_chance": 1.0}
+    ],
+    "xp_reward": 60
+  }
+]

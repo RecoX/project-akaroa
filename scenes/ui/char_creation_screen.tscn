@@ -1,0 +1,144 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7char_creation"]
+
+[ext_resource type="Script" path="res://scenes/ui/char_creation_screen.gd" id="1_script"]
+
+[node name="CharCreationScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.06, 0.06, 0.1, 0.95)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Create New Character"
+horizontal_alignment = 1
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LeftPanel" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+theme_override_constants/separation = 8
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/HSplitContainer/LeftPanel"]
+layout_mode = 2
+text = "Character Name"
+
+[node name="NameInput" type="LineEdit" parent="MarginContainer/VBoxContainer/HSplitContainer/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Enter character name"
+
+[node name="RaceLabel" type="Label" parent="MarginContainer/VBoxContainer/HSplitContainer/LeftPanel"]
+layout_mode = 2
+text = "Race"
+
+[node name="RaceOption" type="OptionButton" parent="MarginContainer/VBoxContainer/HSplitContainer/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ClassLabel" type="Label" parent="MarginContainer/VBoxContainer/HSplitContainer/LeftPanel"]
+layout_mode = 2
+text = "Class"
+
+[node name="ClassOption" type="OptionButton" parent="MarginContainer/VBoxContainer/HSplitContainer/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="GenderButton" type="Button" parent="MarginContainer/VBoxContainer/HSplitContainer/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Gender: Male"
+
+[node name="AttrTitle" type="Label" parent="MarginContainer/VBoxContainer/HSplitContainer/LeftPanel"]
+layout_mode = 2
+text = "Attribute Allocation"
+
+[node name="FreePointsLabel" type="Label" parent="MarginContainer/VBoxContainer/HSplitContainer/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Free Points: 10"
+
+[node name="AttrContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HSplitContainer/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RightPanel" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+theme_override_constants/separation = 8
+
+[node name="RaceInfoTitle" type="Label" parent="MarginContainer/VBoxContainer/HSplitContainer/RightPanel"]
+layout_mode = 2
+text = "Race Info"
+
+[node name="RaceInfoLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HSplitContainer/RightPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="ClassInfoTitle" type="Label" parent="MarginContainer/VBoxContainer/HSplitContainer/RightPanel"]
+layout_mode = 2
+text = "Class Info"
+
+[node name="ClassInfoLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HSplitContainer/RightPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="ButtonRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 16
+
+[node name="CancelButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonRow"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(140, 40)
+text = "Cancel"
+
+[node name="CreateButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonRow"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(140, 40)
+text = "Create"
+
+[node name="StatusLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_alignment = 1

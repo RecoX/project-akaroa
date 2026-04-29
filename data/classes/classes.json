@@ -1,0 +1,74 @@
+[
+  {
+    "id": "warrior",
+    "name": "Warrior",
+    "description": "A master of melee combat, wielding swords and shields with deadly precision.",
+    "starting_attributes": {"strength": 14, "agility": 10, "intelligence": 6, "constitution": 14, "charisma": 8},
+    "primary_attribute": "strength",
+    "equipment_proficiencies": ["melee", "shield", "helmet", "body"],
+    "starting_spells": [],
+    "starting_skills": {"swordsmanship": 10, "defense": 10},
+    "spell_schools": [],
+    "icon": "res://assets/icons/class_warrior.png"
+  },
+  {
+    "id": "mage",
+    "name": "Mage",
+    "description": "A wielder of arcane forces, commanding the elements through sheer intellect.",
+    "starting_attributes": {"strength": 5, "agility": 8, "intelligence": 16, "constitution": 6, "charisma": 10},
+    "primary_attribute": "intelligence",
+    "equipment_proficiencies": ["magic"],
+    "starting_spells": ["fireball_01"],
+    "starting_skills": {"elemental_magic": 10, "meditation": 5},
+    "spell_schools": ["elemental", "restoration"],
+    "icon": "res://assets/icons/class_mage.png"
+  },
+  {
+    "id": "paladin",
+    "name": "Paladin",
+    "description": "A holy warrior who blends martial prowess with divine magic.",
+    "starting_attributes": {"strength": 12, "agility": 8, "intelligence": 10, "constitution": 12, "charisma": 12},
+    "primary_attribute": "strength",
+    "equipment_proficiencies": ["melee", "shield", "helmet", "body"],
+    "starting_spells": ["heal_01"],
+    "starting_skills": {"swordsmanship": 8, "defense": 8, "restoration_magic": 5},
+    "spell_schools": ["restoration"],
+    "icon": "res://assets/icons/class_paladin.png"
+  },
+  {
+    "id": "assassin",
+    "name": "Assassin",
+    "description": "A shadow-dwelling rogue who strikes from the darkness with lethal efficiency.",
+    "starting_attributes": {"strength": 10, "agility": 16, "intelligence": 8, "constitution": 8, "charisma": 6},
+    "primary_attribute": "agility",
+    "equipment_proficiencies": ["melee", "ranged", "body"],
+    "starting_spells": [],
+    "starting_skills": {"swordsmanship": 8, "stealth": 10, "lockpicking": 5},
+    "spell_schools": [],
+    "icon": "res://assets/icons/class_assassin.png"
+  },
+  {
+    "id": "cleric",
+    "name": "Cleric",
+    "description": "A devoted healer and protector, channeling divine power to aid allies.",
+    "starting_attributes": {"strength": 8, "agility": 6, "intelligence": 14, "constitution": 10, "charisma": 14},
+    "primary_attribute": "intelligence",
+    "equipment_proficiencies": ["magic", "shield"],
+    "starting_spells": ["heal_01"],
+    "starting_skills": {"restoration_magic": 12, "meditation": 8},
+    "spell_schools": ["restoration"],
+    "icon": "res://assets/icons/class_cleric.png"
+  },
+  {
+    "id": "hunter",
+    "name": "Hunter",
+    "description": "A skilled tracker and marksman, at home in the wilderness.",
+    "starting_attributes": {"strength": 10, "agility": 14, "intelligence": 8, "constitution": 10, "charisma": 8},
+    "primary_attribute": "agility",
+    "equipment_proficiencies": ["ranged", "body"],
+    "starting_spells": [],
+    "starting_skills": {"archery": 10, "tracking": 8, "woodcutting": 5},
+    "spell_schools": [],
+    "icon": "res://assets/icons/class_hunter.png"
+  }
+]
