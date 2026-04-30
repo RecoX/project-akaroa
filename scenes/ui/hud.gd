@@ -20,6 +20,11 @@ var _zone_label: Label
 var _coordinate_label: Label
 var _buff_bar: HBoxContainer
 var _debuff_bar: HBoxContainer
+var _target_frame: PanelContainer
+var _target_name_label: Label
+var _target_hp_bar: ProgressBar
+var _feedback_label: Label
+var _interaction_prompt: Label
 
 
 func _ready() -> void:
@@ -34,6 +39,11 @@ func _ready() -> void:
 	_coordinate_label = $TopRight/CoordinateLabel
 	_buff_bar = $BottomLeft/BuffBar
 	_debuff_bar = $BottomLeft/DebuffBar
+	_target_frame = $TargetFrame
+	_target_name_label = $TargetFrame/VBox/TargetNameLabel
+	_target_hp_bar = $TargetFrame/VBox/TargetHPBar
+	_feedback_label = $FeedbackLabel
+	_interaction_prompt = $InteractionPrompt
 
 	# Connect to StateManager signals
 	StateManager.player_hp_changed.connect(_on_hp_changed)
@@ -44,6 +54,13 @@ func _ready() -> void:
 	StateManager.zone_changed.connect(_on_zone_changed)
 	StateManager.player_position_changed.connect(_on_position_changed)
 	StateManager.player_leveled_up.connect(_on_player_leveled_up)
+
+	# Connect target and feedback signals
+	StateManager.target_changed.connect(_on_target_changed)
+	StateManager.target_cleared.connect(_on_target_cleared)
+	StateManager.feedback_message.connect(_on_feedback_message)
+	StateManager.interaction_prompt.connect(_on_interaction_prompt)
+	StateManager.interaction_prompt_cleared.connect(_on_interaction_prompt_cleared)
 
 	Log.info(_TAG, "HUD initialized")
 
@@ -110,6 +127,50 @@ func _create_effect_icon(effect) -> PanelContainer:
 	panel.add_child(label)
 
 	return panel
+
+
+## Shows the target frame with the selected target's name and HP.
+func _on_target_changed(target_id: String, target_data: Dictionary) -> void:
+	var target_name: String = target_data.get("name", target_id)
+	var current_hp: int = target_data.get("hp", 0)
+	var max_hp: int = target_data.get("max_hp", current_hp)
+
+	_target_name_label.text = target_name
+	_target_hp_bar.max_value = max_hp
+	_target_hp_bar.value = current_hp
+	_target_frame.visible = true
+	Log.debug(_TAG, "Target frame shown: %s (%d/%d HP)" % [target_name, current_hp, max_hp])
+
+
+## Hides the target frame when the target is cleared.
+func _on_target_cleared() -> void:
+	_target_frame.visible = false
+	Log.debug(_TAG, "Target frame hidden")
+
+
+## Shows a temporary feedback message that auto-hides after 2 seconds.
+func _on_feedback_message(text: String) -> void:
+	_feedback_label.text = text
+	_feedback_label.visible = true
+	Log.debug(_TAG, "Feedback message: %s" % text)
+
+	# Auto-hide after 2 seconds
+	get_tree().create_timer(2.0).timeout.connect(func() -> void:
+		_feedback_label.visible = false
+	)
+
+
+## Shows the interaction prompt text.
+func _on_interaction_prompt(text: String) -> void:
+	_interaction_prompt.text = text
+	_interaction_prompt.visible = true
+	Log.debug(_TAG, "Interaction prompt shown: %s" % text)
+
+
+## Hides the interaction prompt.
+func _on_interaction_prompt_cleared() -> void:
+	_interaction_prompt.visible = false
+	Log.debug(_TAG, "Interaction prompt hidden")
 
 
 ## Handles player level-up — displays a visual notification with audio.

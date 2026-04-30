@@ -143,6 +143,24 @@ signal trade_slot_updated(is_player: bool, slot_index: int, item_data: Dictionar
 signal trade_closed()
 
 
+# --- Target selection signals ---
+
+## Emitted when the selected target changes.
+signal target_changed(target_id: String, target_data: Dictionary)
+
+## Emitted when the current target is deselected.
+signal target_cleared()
+
+## Emitted when a feedback message should be shown in the HUD (e.g. "Too far away").
+signal feedback_message(text: String)
+
+## Emitted when an interaction prompt should be shown (e.g. "Press E to interact").
+signal interaction_prompt(text: String)
+
+## Emitted when the interaction prompt should be hidden.
+signal interaction_prompt_cleared()
+
+
 # --- Player data ---
 
 ## Full player character data dictionary (name, class, race, stats, etc.).
@@ -176,10 +194,19 @@ var player_buffs: Array = []
 var player_debuffs: Array = []
 
 ## Reputation and faction data.
-var player_reputation: Dictionary = {"alignment": "citizen", "faction": "", "pvp_stats": {}}
+var player_reputation: Dictionary = {"alignment": "citizen", "faction": "", "pvp_stats": {"kills": 0, "deaths": 0, "kill_streak": 0, "best_streak": 0}}
 
 ## Guild membership data.
 var player_guild: Dictionary = {}
+
+
+# --- Target selection state ---
+
+## The character ID of the currently selected target (enemy or NPC). Empty when no target.
+var current_target_id: String = ""
+
+## Full data dictionary for the currently selected target. Empty when no target.
+var current_target_data: Dictionary = {}
 
 
 # --- World state ---
@@ -226,10 +253,11 @@ func set_player_data(data: Dictionary) -> void:
 
 	# Position
 	player_position = Vector2i(
-		data.get("position_x", 0),
-		data.get("position_y", 0)
+		int(data.get("position_x", 0)),
+		int(data.get("position_y", 0))
 	)
-	player_heading = data.get("heading", Heading.SOUTH) as Heading
+	var heading_val = data.get("heading", Heading.SOUTH)
+	player_heading = (int(heading_val) as Heading) if heading_val is float or heading_val is int else Heading.SOUTH
 
 	# Collections
 	player_inventory = data.get("inventory", [])
@@ -239,7 +267,7 @@ func set_player_data(data: Dictionary) -> void:
 	player_quests = data.get("quests", [])
 	player_buffs = data.get("buffs", [])
 	player_debuffs = data.get("debuffs", [])
-	player_reputation = data.get("reputation", {"alignment": "citizen", "faction": "", "pvp_stats": {}})
+	player_reputation = data.get("reputation", {"alignment": "citizen", "faction": "", "pvp_stats": {"kills": 0, "deaths": 0, "kill_streak": 0, "best_streak": 0}})
 	player_guild = data.get("guild", {})
 
 	# Emit initial state signals so UI elements can sync
@@ -346,6 +374,24 @@ func process_npc_interaction(npc_id: String) -> void:
 		npc_data.get("name", "?"), npc_type, panel_type])
 
 	npc_interaction_requested.emit(npc_id, panel_type, npc_data)
+
+
+## Sets the current combat/interaction target and emits [signal target_changed].
+## [param target_id] The unique identifier of the target character.
+## [param target_data] The full data dictionary for the target character.
+func set_target(target_id: String, target_data: Dictionary) -> void:
+	current_target_id = target_id
+	current_target_data = target_data
+	Log.info(_TAG, "Target set: '%s'" % target_id)
+	target_changed.emit(target_id, target_data)
+
+
+## Clears the current target selection and emits [signal target_cleared].
+func clear_target() -> void:
+	current_target_id = ""
+	current_target_data = {}
+	Log.info(_TAG, "Target cleared")
+	target_cleared.emit()
 
 
 # ---------------------------------------------------------------------------

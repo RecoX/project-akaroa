@@ -26,6 +26,9 @@ var _bindings: Array = []
 ## References to the slot PanelContainer nodes.
 var _slot_nodes: Array = []
 
+## Maps cooldown category -> Array of slot indices currently on cooldown.
+var _cooldown_slots: Dictionary = {}
+
 
 func _ready() -> void:
 	_bindings.resize(SLOT_COUNT)
@@ -33,7 +36,36 @@ func _ready() -> void:
 		_bindings[i] = {}
 
 	_create_slots()
+
+	# Connect cooldown signals for visual dimming (Task 14.3).
+	StateManager.cooldown_started.connect(_on_cooldown_started)
+	StateManager.cooldown_finished.connect(_on_cooldown_finished)
+
+	# Auto-populate hotkey bar with learned spells after a short delay
+	# (player data may not be set yet during _ready).
+	StateManager.app_state_changed.connect(_on_app_state_changed)
+
 	Log.info(_TAG, "HotkeyBar initialized with %d slots" % SLOT_COUNT)
+
+
+## When entering gameplay, auto-bind learned spells to the first available slots.
+func _on_app_state_changed(new_state: StateManager.AppState) -> void:
+	if new_state == StateManager.AppState.GAMEPLAY:
+		_auto_bind_spells()
+
+
+## Binds learned spells to the first empty hotkey slots.
+func _auto_bind_spells() -> void:
+	var spells: Array = StateManager.player_spells
+	var slot_index := 0
+	for spell_id in spells:
+		if slot_index >= SLOT_COUNT:
+			break
+		var id: String = spell_id if spell_id is String else str(spell_id)
+		bind_slot(slot_index, "spell", id)
+		slot_index += 1
+	if slot_index > 0:
+		Log.info(_TAG, "Auto-bound %d spells to hotkey bar" % slot_index)
 
 
 ## Binds a slot to an item or spell.
@@ -88,8 +120,10 @@ func _activate_slot(index: int) -> void:
 			else:
 				Log.warning(_TAG, "Item '%s' not found in inventory" % id)
 		"spell":
-			StateManager.process_spell_cast(id, "")
-			Log.debug(_TAG, "Activated spell '%s' from slot %d" % [id, index])
+			# Get the current target from StateManager for spell casting.
+			var target_id: String = StateManager.current_target_id
+			StateManager.process_spell_cast(id, target_id)
+			Log.debug(_TAG, "Activated spell '%s' from slot %d (target: '%s')" % [id, index, target_id])
 		_:
 			Log.warning(_TAG, "Unknown binding type '%s' in slot %d" % [type, index])
 
@@ -182,3 +216,61 @@ func _position_to_slot(pos: Vector2) -> int:
 		if rect.has_point(pos):
 			return i
 	return -1
+
+
+# ---------------------------------------------------------------------------
+# Cooldown indicators  (Task 14.3)
+# ---------------------------------------------------------------------------
+
+## Category-to-binding-type mapping for matching cooldowns to slots.
+const _COOLDOWN_TYPE_MAP: Dictionary = {
+	"magic": "spell",
+	"melee": "item",
+	"ranged": "item",
+	"consumable": "item",
+}
+
+
+## Handles StateManager.cooldown_started — dims slots matching the cooldown category.
+func _on_cooldown_started(category: String, _duration: float) -> void:
+	var binding_type: String = _COOLDOWN_TYPE_MAP.get(category, "")
+	var affected_slots: Array = []
+
+	for i in range(SLOT_COUNT):
+		var binding: Dictionary = _bindings[i]
+		if binding.is_empty():
+			continue
+		var slot_type: String = binding.get("type", "")
+		if slot_type == binding_type:
+			_dim_slot(i)
+			affected_slots.append(i)
+
+	if not affected_slots.is_empty():
+		_cooldown_slots[category] = affected_slots
+		Log.debug(_TAG, "Cooldown started '%s' — dimmed slots: %s" % [category, str(affected_slots)])
+
+
+## Handles StateManager.cooldown_finished — restores slots matching the cooldown category.
+func _on_cooldown_finished(category: String) -> void:
+	var affected_slots: Array = _cooldown_slots.get(category, [])
+	for i in affected_slots:
+		_restore_slot(i)
+
+	_cooldown_slots.erase(category)
+	Log.debug(_TAG, "Cooldown finished '%s' — restored slots" % category)
+
+
+## Visually dims a slot by reducing its modulate alpha to indicate cooldown.
+func _dim_slot(index: int) -> void:
+	if index < 0 or index >= _slot_nodes.size():
+		return
+	var slot: PanelContainer = _slot_nodes[index]
+	slot.modulate = Color(0.5, 0.5, 0.5, 0.5)
+
+
+## Restores a slot's visual appearance after cooldown expires.
+func _restore_slot(index: int) -> void:
+	if index < 0 or index >= _slot_nodes.size():
+		return
+	var slot: PanelContainer = _slot_nodes[index]
+	slot.modulate = Color(1.0, 1.0, 1.0, 1.0)

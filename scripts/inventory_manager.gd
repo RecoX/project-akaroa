@@ -120,11 +120,22 @@ func equip_item(slot_index: int) -> void:
 		return
 
 	# Handle ring slot — use ring_2 if ring_1 is occupied.
-	if item_type == "ring" and not StateManager.player_equipment.get("ring_1", {}).is_empty():
+	var ring_check = StateManager.player_equipment.get("ring_1", {})
+	var ring_occupied: bool = false
+	if ring_check is Dictionary:
+		ring_occupied = not ring_check.is_empty()
+	elif ring_check is String:
+		ring_occupied = ring_check != ""
+	if item_type == "ring" and ring_occupied:
 		equip_slot = "ring_2"
 
 	# Swap: move currently equipped item (if any) back to inventory slot.
-	var currently_equipped: Dictionary = StateManager.player_equipment.get(equip_slot, {})
+	var equipped_raw = StateManager.player_equipment.get(equip_slot, {})
+	var currently_equipped: Dictionary = {}
+	if equipped_raw is Dictionary:
+		currently_equipped = equipped_raw
+	elif equipped_raw is String and equipped_raw != "":
+		currently_equipped = MockDataProvider.get_item(equipped_raw)
 
 	# Place new item in equipment slot.
 	StateManager.player_equipment[equip_slot] = item

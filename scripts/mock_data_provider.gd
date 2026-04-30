@@ -162,6 +162,15 @@ func get_zone_metadata(zone_id: String) -> Dictionary:
 	return {"id": zone_id, "name": "Unknown Zone", "music_track": "", "ambient_sound": "", "weather_default": "clear"}
 
 
+## Returns full enemy definition data for the given enemy ID, or a fallback
+## dictionary if not found.
+func get_enemy(enemy_id: String) -> Dictionary:
+	if enemy_id in _enemies_db:
+		return _enemies_db[enemy_id]
+	Log.warning(_TAG, "Enemy '%s' not found — returning fallback" % enemy_id)
+	return {"id": enemy_id, "name": "Unknown Enemy", "hp": 50, "max_hp": 50, "xp_reward": 0, "loot_table": []}
+
+
 ## Returns an array of enemy data dictionaries for enemies in the given chunk,
 ## or an empty array if the chunk has no enemies or is not loaded.
 func get_enemies_in_chunk(chunk_x: int, chunk_y: int) -> Array:

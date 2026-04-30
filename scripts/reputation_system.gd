@@ -115,6 +115,12 @@ func change_reputation(delta: int) -> void:
 
 ## Records a PvP kill.
 func record_kill() -> void:
+	if not _pvp_stats.has("kills"):
+		_pvp_stats["kills"] = 0
+	if not _pvp_stats.has("kill_streak"):
+		_pvp_stats["kill_streak"] = 0
+	if not _pvp_stats.has("best_streak"):
+		_pvp_stats["best_streak"] = 0
 	_pvp_stats["kills"] += 1
 	_pvp_stats["kill_streak"] += 1
 	if _pvp_stats["kill_streak"] > _pvp_stats["best_streak"]:
@@ -125,6 +131,10 @@ func record_kill() -> void:
 
 ## Records a PvP death.
 func record_death() -> void:
+	if not _pvp_stats.has("deaths"):
+		_pvp_stats["deaths"] = 0
+	if not _pvp_stats.has("kill_streak"):
+		_pvp_stats["kill_streak"] = 0
 	_pvp_stats["deaths"] += 1
 	_pvp_stats["kill_streak"] = 0
 	StateManager.player_reputation["pvp_stats"] = _pvp_stats
@@ -159,7 +169,16 @@ func _load_from_state() -> void:
 	var rep_data: Dictionary = StateManager.player_reputation
 	_alignment = rep_data.get("alignment", "citizen")
 	_reputation_value = rep_data.get("value", 0)
-	_pvp_stats = rep_data.get("pvp_stats", _pvp_stats)
+	var loaded_stats: Dictionary = rep_data.get("pvp_stats", {})
+	# Merge loaded stats into defaults so all keys are guaranteed to exist.
+	if loaded_stats.has("kills"):
+		_pvp_stats["kills"] = loaded_stats["kills"]
+	if loaded_stats.has("deaths"):
+		_pvp_stats["deaths"] = loaded_stats["deaths"]
+	if loaded_stats.has("kill_streak"):
+		_pvp_stats["kill_streak"] = loaded_stats["kill_streak"]
+	if loaded_stats.has("best_streak"):
+		_pvp_stats["best_streak"] = loaded_stats["best_streak"]
 
 
 ## Computes alignment string from a reputation value.

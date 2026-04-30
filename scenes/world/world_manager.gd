@@ -184,10 +184,12 @@ func _instantiate_chunk(chunk_x: int, chunk_y: int, data: Dictionary) -> void:
 			var quad := _create_tile_quad(local_pos + Vector3(0, 0.01, 0), Color(0.5, 0.7, 0.3))
 			detail_mesh.add_child(quad)
 
-		# Object layer quad (above detail).
+		# Object layer quad — color and height vary by graphic_id prefix.
 		var object_gfx: String = layers.get("object", {}).get("graphic_id", "")
 		if object_gfx != "":
-			var quad := _create_tile_quad(local_pos + Vector3(0, 0.02, 0), Color(0.6, 0.4, 0.2))
+			var obj_color := _get_object_color(object_gfx)
+			var obj_y := _get_object_elevation(object_gfx)
+			var quad := _create_tile_quad(local_pos + Vector3(0, obj_y, 0), obj_color)
 			object_mesh.add_child(quad)
 
 		# Roof layer quad (above objects).
@@ -216,6 +218,40 @@ func _create_tile_quad(pos: Vector3, color: Color) -> MeshInstance3D:
 	return mesh_instance
 
 
+## Returns a placeholder color for an object layer tile based on its graphic_id prefix.
+func _get_object_color(graphic_id: String) -> Color:
+	if graphic_id.begins_with("wall_"):
+		return Color(0.5, 0.5, 0.5)
+	if graphic_id.begins_with("tree_"):
+		return Color(0.1, 0.4, 0.1)
+	if graphic_id.begins_with("rock_"):
+		return Color(0.4, 0.3, 0.2)
+	if graphic_id.begins_with("bush_"):
+		return Color(0.2, 0.6, 0.2)
+	if graphic_id.begins_with("crate_") or graphic_id.begins_with("barrel_"):
+		return Color(0.6, 0.5, 0.3)
+	if graphic_id.begins_with("torch_"):
+		return Color(0.9, 0.5, 0.1)
+	if graphic_id.begins_with("campfire_"):
+		return Color(0.8, 0.3, 0.1)
+	if graphic_id.begins_with("signpost_"):
+		return Color(0.5, 0.35, 0.2)
+	if graphic_id.begins_with("fence_"):
+		return Color(0.55, 0.4, 0.25)
+	# Default fallback for unrecognized prefixes.
+	return Color(0.6, 0.4, 0.2)
+
+
+## Returns the Y elevation for an object layer tile based on its graphic_id prefix.
+## Walls are tallest (1.0), fences slightly lower (0.75), other objects at half-height (0.5).
+func _get_object_elevation(graphic_id: String) -> float:
+	if graphic_id.begins_with("wall_"):
+		return 1.0
+	if graphic_id.begins_with("fence_"):
+		return 0.75
+	return 0.5
+
+
 ## Creates a placeholder chunk node when chunk data fails to load.
 func _create_placeholder_chunk(chunk_x: int, chunk_y: int) -> void:
 	var key := "%d_%d" % [chunk_x, chunk_y]
@@ -231,7 +267,7 @@ func _create_placeholder_chunk(chunk_x: int, chunk_y: int) -> void:
 	chunk_node.add_child(quad)
 	chunk_container.add_child(chunk_node)
 	_loaded_chunks[key] = chunk_node
-	Log.error(TAG, "Created placeholder for missing chunk %s" % key)
+	Log.debug(TAG, "Created placeholder for missing chunk %s" % key)
 
 
 # ---------------------------------------------------------------------------

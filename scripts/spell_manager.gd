@@ -12,6 +12,9 @@ extends Node
 
 const TAG := "SpellManager"
 
+## Preloaded CombatSystem script for static method access (manhattan_distance).
+const _CombatSystemScript := preload("res://scripts/combat_system.gd")
+
 
 ## Casting mode determines how spells are targeted and activated.
 enum CastMode {
@@ -49,8 +52,8 @@ func _ready() -> void:
 # ---------------------------------------------------------------------------
 
 
-## Casts a spell on [param target_id]. Validates mana availability and
-## delegates to Combat_System for damage/effect application.
+## Casts a spell on [param target_id]. Validates range and mana availability,
+## then delegates to Combat_System for damage/effect application.
 func cast_spell(spell_id: String, target_id: String) -> void:
 	# Find the spell in learned spells.
 	var spell := _find_learned_spell(spell_id)
@@ -58,10 +61,25 @@ func cast_spell(spell_id: String, target_id: String) -> void:
 		Log.warning(TAG, "Spell '%s' not learned or not found" % spell_id)
 		return
 
+	# Validate range — get spell range and calculate Manhattan distance.
+	var spell_range: int = spell.get("range", 0)
+	if spell_range > 0 and target_id != "":
+		var target_pos := _get_target_position(target_id)
+		var distance: int = _CombatSystemScript.manhattan_distance(
+			StateManager.player_position, target_pos
+		)
+		if distance > spell_range:
+			StateManager.feedback_message.emit("Out of range")
+			Log.info(TAG, "Spell '%s' out of range — distance %d > range %d" % [
+				spell.get("name", spell_id), distance, spell_range
+			])
+			return
+
 	# Validate mana.
 	var mana_cost: int = spell.get("mana_cost", 0)
 	var current_mana: int = StateManager.player_data.get("mana", 0)
 	if current_mana < mana_cost:
+		StateManager.feedback_message.emit("Not enough mana")
 		Log.info(TAG, "Not enough mana for '%s' (need %d, have %d)" % [
 			spell.get("name", spell_id), mana_cost, current_mana
 		])
@@ -155,3 +173,32 @@ func _find_learned_spell(spell_id: String) -> Dictionary:
 		if spell.get("id", "") == spell_id:
 			return spell
 	return {}
+
+
+## Returns the tile position of the target character.
+## Looks up position from StateManager.current_target_data first, then falls
+## back to searching spawned characters via CharacterRenderer.
+func _get_target_position(target_id: String) -> Vector2i:
+	# Try StateManager.current_target_data (set during target selection).
+	if StateManager.current_target_id == target_id and not StateManager.current_target_data.is_empty():
+		var px: int = StateManager.current_target_data.get("position_x", 0)
+		var py: int = StateManager.current_target_data.get("position_y", 0)
+		return Vector2i(px, py)
+
+	# Fallback: try to find the character via CharacterRenderer on the parent.
+	var gameplay_scene: Node = get_parent()
+	if gameplay_scene:
+		var char_renderer: Node = gameplay_scene.get_node_or_null("CharacterRenderer")
+		if char_renderer and char_renderer.get("_characters") != null:
+			var characters: Dictionary = char_renderer._characters
+			if characters.has(target_id):
+				var instance: Node3D = characters[target_id]
+				if is_instance_valid(instance):
+					@warning_ignore("integer_division")
+					var tx: int = int(instance.position.x / 32.0)
+					@warning_ignore("integer_division")
+					var ty: int = int(instance.position.z / 32.0)
+					return Vector2i(tx, ty)
+
+	Log.warning(TAG, "Could not determine position for target '%s'" % target_id)
+	return Vector2i.ZERO

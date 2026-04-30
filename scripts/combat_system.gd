@@ -48,6 +48,9 @@ signal cooldown_expired(category: String)
 ## Emitted when a target is killed, with its loot table.
 signal target_killed(target_id: String, loot: Array)
 
+## Emitted when healing is applied to a character.
+signal healing_applied(target_id: String, amount: int)
+
 
 # ---------------------------------------------------------------------------
 # State
@@ -131,6 +134,7 @@ func attempt_spell_cast(spell_id: String, target_id: String) -> void:
 	var mana_cost: int = spell.get("mana_cost", 0)
 	var current_mana: int = StateManager.player_data.get("mana", 0)
 	if current_mana < mana_cost:
+		StateManager.feedback_message.emit("Not enough mana")
 		Log.info(TAG, "Not enough mana for '%s' (need %d, have %d)" % [spell_id, mana_cost, current_mana])
 		return
 
@@ -151,12 +155,17 @@ func _calculate_melee_damage(_target_id: String) -> Dictionary:
 	var base_damage: int = randi_range(MELEE_BASE_MIN, MELEE_BASE_MAX)
 
 	# Add weapon bonus from equipped weapon.
-	var weapon: Dictionary = StateManager.player_equipment.get("weapon", {})
-	var weapon_bonus: int = weapon.get("damage", 0)
+	var weapon_raw = StateManager.player_equipment.get("weapon", {})
+	var weapon: Dictionary = {}
+	if weapon_raw is Dictionary:
+		weapon = weapon_raw
+	elif weapon_raw is String and weapon_raw != "":
+		weapon = MockDataProvider.get_item(weapon_raw)
+	var weapon_bonus: int = int(weapon.get("damage", 0))
 	if weapon_bonus == 0:
 		# Try damage_max / damage_min range from item data.
-		var dmg_min: int = weapon.get("damage_min", 0)
-		var dmg_max: int = weapon.get("damage_max", 0)
+		var dmg_min: int = int(weapon.get("damage_min", 0))
+		var dmg_max: int = int(weapon.get("damage_max", 0))
 		if dmg_max > 0:
 			weapon_bonus = randi_range(dmg_min, dmg_max)
 
@@ -176,11 +185,16 @@ func _calculate_ranged_damage(_target_id: String) -> Dictionary:
 	var base_damage: int = randi_range(RANGED_BASE_MIN, RANGED_BASE_MAX)
 
 	# Add ranged weapon bonus.
-	var weapon: Dictionary = StateManager.player_equipment.get("weapon", {})
-	var weapon_bonus: int = weapon.get("damage", 0)
+	var ranged_weapon_raw = StateManager.player_equipment.get("weapon", {})
+	var weapon: Dictionary = {}
+	if ranged_weapon_raw is Dictionary:
+		weapon = ranged_weapon_raw
+	elif ranged_weapon_raw is String and ranged_weapon_raw != "":
+		weapon = MockDataProvider.get_item(ranged_weapon_raw)
+	var weapon_bonus: int = int(weapon.get("damage", 0))
 	if weapon_bonus == 0:
-		var dmg_min: int = weapon.get("damage_min", 0)
-		var dmg_max: int = weapon.get("damage_max", 0)
+		var dmg_min: int = int(weapon.get("damage_min", 0))
+		var dmg_max: int = int(weapon.get("damage_max", 0))
 		if dmg_max > 0:
 			weapon_bonus = randi_range(dmg_min, dmg_max)
 
@@ -272,8 +286,10 @@ func _apply_healing(target_id: String, amount: int) -> void:
 		var current_hp: int = StateManager.player_data.get("hp", 100)
 		var max_hp: int = StateManager.player_data.get("max_hp", 100)
 		var new_hp: int = mini(max_hp, current_hp + amount)
+		var actual_heal: int = new_hp - current_hp
 		StateManager.player_data["hp"] = new_hp
 		StateManager.player_hp_changed.emit(new_hp, max_hp)
+		healing_applied.emit(target_id if target_id != "" else player_id, actual_heal if actual_heal > 0 else amount)
 		Log.info(TAG, "Healed player for %d HP (%d/%d)" % [amount, new_hp, max_hp])
 
 
@@ -389,14 +405,31 @@ func get_cooldown_remaining(category: String) -> float:
 
 ## Returns the melee attack cooldown duration based on equipped weapon.
 func _get_melee_cooldown() -> float:
-	var weapon: Dictionary = StateManager.player_equipment.get("weapon", {})
+	var weapon := _get_equipped_weapon_data()
 	return weapon.get("attack_speed", DEFAULT_MELEE_COOLDOWN)
 
 
 ## Returns the ranged attack cooldown duration.
 func _get_ranged_cooldown() -> float:
-	var weapon: Dictionary = StateManager.player_equipment.get("weapon", {})
+	var weapon := _get_equipped_weapon_data()
 	return weapon.get("attack_speed", DEFAULT_RANGED_COOLDOWN)
+
+
+## Resolves the equipped weapon to a full item data dictionary.
+## Handles both string IDs (e.g. "iron_sword_01") and inline dictionaries.
+func _get_equipped_weapon_data() -> Dictionary:
+	var raw = StateManager.player_equipment.get("weapon", {})
+	if raw is Dictionary:
+		return raw
+	if raw is String and raw != "":
+		return MockDataProvider.get_item(raw)
+	return {}
+
+
+## Calculates the Manhattan distance between two tile positions.
+## Used for melee range checks (max 2 tiles) and spell range validation.
+static func manhattan_distance(a: Vector2i, b: Vector2i) -> int:
+	return absi(a.x - b.x) + absi(a.y - b.y)
 
 
 ## Stub for ammo consumption. Returns true if ammo is available.

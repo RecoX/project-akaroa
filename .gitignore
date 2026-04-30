@@ -4,3 +4,9 @@
 
 # Kiro
 .kiro/
+
+# Build artifacts
+*.exe
+*.pck
+*.console.exe
+build/

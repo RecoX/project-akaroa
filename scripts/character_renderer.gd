@@ -23,6 +23,14 @@ const NAME_COLORS: Dictionary = {
 	"gm": Color(0.2, 0.9, 0.9),         # cyan
 }
 
+## NPC type-based name color mapping (Task 11.3).
+const NPC_TYPE_COLORS: Dictionary = {
+	"shopkeeper": Color(0.2, 0.9, 0.2),   # green
+	"quest_giver": Color(0.9, 0.9, 0.2),  # yellow
+	"banker": Color(1.0, 1.0, 1.0),       # white
+	"dialogue": Color(1.0, 1.0, 1.0),     # white
+}
+
 ## Default chat bubble display duration per character of message text.
 const BUBBLE_SECONDS_PER_CHAR: float = 0.06
 ## Minimum chat bubble duration.
@@ -39,6 +47,9 @@ const FLOAT_TEXT_SPEED: float = 8.0
 ## Active character instances keyed by char_id.
 var _characters: Dictionary = {}
 
+## The char_id of the currently highlighted target (for removing old highlight).
+var _current_highlight_id: String = ""
+
 
 # ---------------------------------------------------------------------------
 # Lifecycle
@@ -53,6 +64,8 @@ func _ready() -> void:
 	StateManager.character_attacked.connect(_on_character_attacked)
 	StateManager.character_died.connect(_on_character_died)
 	StateManager.chat_bubble.connect(_on_chat_bubble)
+	StateManager.target_changed.connect(_on_target_changed)
+	StateManager.target_cleared.connect(_on_target_cleared)
 	Log.info(TAG, "Character_Renderer ready")
 
 
@@ -114,10 +127,15 @@ func _configure_character(instance: CharacterBody3D, data: Dictionary) -> void:
 	instance.display_name = data.get("name", "Unknown")
 	instance.guild_tag = data.get("guild_tag", "")
 	instance.reputation = data.get("reputation", "citizen")
-	instance.current_hp = data.get("hp", 100)
-	instance.max_hp = data.get("max_hp", 100)
-	instance.shield_points = data.get("shield", 0)
-	instance.max_shield = data.get("max_shield", 0)
+	instance.current_hp = int(data.get("hp", 100))
+	instance.max_hp = int(data.get("max_hp", 100))
+	instance.shield_points = int(data.get("shield", 0))
+	instance.max_shield = int(data.get("max_shield", 0))
+
+	# Store NPC type for name color override (Task 11.3).
+	var npc_type: String = data.get("type", "")
+	if npc_type != "":
+		instance.set_meta("npc_type", npc_type)
 
 	# Apply initial overhead UI.
 	_apply_overhead_ui(instance)
@@ -134,7 +152,8 @@ func _configure_character(instance: CharacterBody3D, data: Dictionary) -> void:
 		_apply_equipment_to_slot(instance, slot_name, equip_data)
 
 	# Set initial heading.
-	var heading: int = data.get("heading", StateManager.Heading.SOUTH)
+	var heading_raw = data.get("heading", StateManager.Heading.SOUTH)
+	var heading: int = int(heading_raw) if heading_raw is float or heading_raw is int else StateManager.Heading.SOUTH
 	_apply_heading(instance, heading)
 
 	Log.debug(TAG, "Configured character '%s'" % instance.display_name)
@@ -308,13 +327,13 @@ func update_overhead_ui(char_id: String, data: Dictionary) -> void:
 	if data.has("reputation"):
 		instance.reputation = data["reputation"]
 	if data.has("hp"):
-		instance.current_hp = data["hp"]
+		instance.current_hp = int(data["hp"])
 	if data.has("max_hp"):
-		instance.max_hp = data["max_hp"]
+		instance.max_hp = int(data["max_hp"])
 	if data.has("shield"):
-		instance.shield_points = data["shield"]
+		instance.shield_points = int(data["shield"])
 	if data.has("max_shield"):
-		instance.max_shield = data["max_shield"]
+		instance.max_shield = int(data["max_shield"])
 
 	_apply_overhead_ui(instance)
 
@@ -333,8 +352,12 @@ func _apply_overhead_ui(instance: CharacterBody3D) -> void:
 			label_text += " <%s>" % instance.guild_tag
 		name_label.text = label_text
 
-		# Name color based on reputation.
+		# Name color based on reputation, with NPC type override (Task 11.3).
 		var name_color: Color = NAME_COLORS.get(instance.reputation, Color.WHITE)
+		if instance.has_meta("npc_type"):
+			var npc_type: String = instance.get_meta("npc_type")
+			if npc_type in NPC_TYPE_COLORS:
+				name_color = NPC_TYPE_COLORS[npc_type]
 		name_label.add_theme_color_override("font_color", name_color)
 
 	# --- HP bar ---
@@ -433,6 +456,59 @@ func _bind_overhead_sprite(instance: CharacterBody3D) -> void:
 		(func():
 			sprite.texture = viewport.get_texture()
 		).call_deferred()
+
+
+# ---------------------------------------------------------------------------
+# Target Highlight  (Task 4)
+# ---------------------------------------------------------------------------
+
+
+## Adds or removes a colored ring (flat disc) under the character to indicate
+## target selection. Yellow ring for NPCs, red ring for enemies (criminal).
+func set_target_highlight(char_id: String, enabled: bool) -> void:
+	var instance := _get_character(char_id)
+	if instance == null:
+		return
+
+	var highlight_name := "TargetHighlightRing"
+
+	# Remove existing highlight if present.
+	var existing: Node = instance.get_node_or_null(highlight_name)
+	if existing:
+		existing.queue_free()
+
+	if not enabled:
+		Log.debug(TAG, "Removed target highlight from '%s'" % char_id)
+		return
+
+	# Create a flat disc mesh as the highlight ring.
+	var mesh_instance := MeshInstance3D.new()
+	mesh_instance.name = highlight_name
+
+	var disc := CylinderMesh.new()
+	disc.top_radius = 6.0
+	disc.bottom_radius = 6.0
+	disc.height = 0.2
+	mesh_instance.mesh = disc
+
+	# Position at ground level under the character.
+	mesh_instance.position = Vector3(0.0, 0.1, 0.0)
+
+	# Determine color based on reputation: red for enemies, yellow for NPCs.
+	var mat := StandardMaterial3D.new()
+	var reputation: String = instance.reputation if "reputation" in instance else "citizen"
+	if reputation == "criminal":
+		mat.albedo_color = Color(0.9, 0.2, 0.2, 0.6)  # Red for enemies
+	else:
+		mat.albedo_color = Color(0.9, 0.9, 0.2, 0.6)  # Yellow for NPCs
+	mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	mat.emission_enabled = true
+	mat.emission = mat.albedo_color
+	mat.emission_energy_multiplier = 0.3
+	mesh_instance.material_override = mat
+
+	instance.add_child(mesh_instance)
+	Log.debug(TAG, "Added target highlight to '%s' (reputation: %s)" % [char_id, reputation])
 
 
 # ---------------------------------------------------------------------------
@@ -681,9 +757,35 @@ func _on_chat_bubble(char_id: String, message: String, duration: float) -> void:
 	show_chat_bubble(char_id, message, duration)
 
 
+## Handles StateManager.target_changed — removes old highlight and adds new one.
+func _on_target_changed(target_id: String, _target_data: Dictionary) -> void:
+	# Remove highlight from previously targeted character.
+	if _current_highlight_id != "":
+		set_target_highlight(_current_highlight_id, false)
+
+	# Add highlight to the new target.
+	_current_highlight_id = target_id
+	set_target_highlight(target_id, true)
+
+
+## Handles StateManager.target_cleared — removes the current highlight.
+func _on_target_cleared() -> void:
+	if _current_highlight_id != "":
+		set_target_highlight(_current_highlight_id, false)
+		_current_highlight_id = ""
+
+
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
+
+## Returns the name color for a given NPC type string, or Color.WHITE if unknown.
+## Used by property tests to verify the NPC type -> color mapping (Task 11.3).
+static func get_npc_name_color(npc_type: String) -> Color:
+	if npc_type in NPC_TYPE_COLORS:
+		return NPC_TYPE_COLORS[npc_type]
+	return Color.WHITE
 
 
 ## Returns the character instance for [param char_id], or null with a warning.
