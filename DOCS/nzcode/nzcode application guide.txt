@@ -1,0 +1,286 @@
+CODE FUNDING
+Application Writing Guide
+The CODE Funding Application Writing Guide has been created to help teams
+and/or studios interested in applying for a Kickstart or Start Up Grant from the
+New Zealand Centre of Digital Excellence (CODE).
+The objective of CODE’s grant funding is to support teams in their early stages of their
+journey towards becoming a sustainable studio that is able to support itself through
+the sale of their games.
+While we acknowledge and respect the creative work that goes into making games,
+this application must additionally demonstrate the business development work that
+has been done (and will be done) to decrease risk and increase the chances of the
+studio being able to sustainably support New Zealand game developers.
+Within this guide is a description of the information that should be included within the
+Main Application Document. While there may be more information that you may want
+to include that will help to show your business acumen, the items listed in each section
+are what the Assessors are expecting to be included.
+Please note:
+• The Main Application Document will contain a combination of information that would be
+found in a typical Game Design Document and/or Pitch Deck as well as information that
+would be found in a cohesive Business Plan.
+• The intention of asking our applicants to complete this process is twofold; it helps our
+assessors check off the requirements needed to see that your project is viable for the level
+of funding you are applying for, and it provides a standard format to frame your planning.
+• Completing this application is also beneficial for you as an applicant because it will equip
+you with a “toolbox” from which to draw material when you go to pitch to publishers,
+platform holders such as Xbox, PlayStation etc. and other financial partners, as well as
+helping you to think about potential plans and paths for your game’s release and beyond.
+• While we do not require exhaustive detail (i.e. your full Game Design Document, or all of
+the data gathered for your market research), we do require the key points that validate your
+project and demonstrates that the project is viable and stands out in its genre - both in
+terms of game design and market analysis.
+• To be clear, you will not submit your whole Game Design Document nor your entire
+business plan but you will need to submit a document that conveys:
+• The fun and distinct aspects of your title; tone, mechanics or otherwise, and the
+relevant research-based evidence that proves that your game is worth supporting;
+• The high level production and financial plans that are reasonable and achievable;
+• The summary of your market research, the breakdown of your audiences, and the
+marketing plan to how you’ll be connecting with your players;
+• The evidence that you / your team has the experience needed to produce the product.
+CODE Funding Application Writing Guide | Last updated February 2026 | Page 1
+This Main Application Document will be submitted alongside:
+• Your Application Form
+• Your core team CVs
+• Your build (if applicable)
+• Your Production spreadsheet - please use our provided spreadsheet
+• Any supplemental documentation supporting your application
+Handy tips when writing your application
+• Use the sections below as headings and subheadings for each section of your document, and keep
+them generally in this order so it’s easy and clear for the assessors to navigate your document.
+• Keep your writing clear and concise -use headings and subheadings to organise your document.
+• Write in a third-person business style.
+• Use diagrams where appropriate or useful.
+• Include any other information or learning that can help to provide additional context on your
+business skills and decisions.
+• Art assets are welcome within the document to help showcase the game’s style, but they should not
+impede the written information.
+• Please make sure our assessment panel can see your reasoning if you are making any assertions.
+E.G. “It is believed that that Developer can get 10,000 users on our Discord server by January 202X”-
+describe how, including the strategy and methodology. Don’t leave the assessors guessing.
+• Be specific about your target markets/audiences/players. E.G. “We’re targeting mid-core gamers
+interested in fantasy rogue-likes who will likely have played…” rather than “Male and female gamers,
+18-50”.
+• Avoid the word “unique” or other stock words/phrases - specificity with language will communicate
+your proposal more effectively than using similarly common expressions - “Unique Selling Points/
+Proposition” (USP) is the exception to this rule.
+• As this document should focus on the big picture of what your game has to offer and how the
+business will become sustainable, the assessment panel does not need to see long asset lists you
+have yet to complete, however grouping things as features can be helpful to show scope.
+• If there are core parts of your games design that are being iterated on, state this and discuss briefly
+how you are going to tackle this problem.
+• If you are including supplemental documentation, make sure it’s organised and readable, and
+consider including summaries to explain findings.
+• Use non-discriminatory language.
+• If your game includes content outside of your personal experience, follow guidelines for First Nations
+content or utilise other appropriate resources. Cultural consultation is not an afterthought.
+• The applications cut off will be at 5:00pm sharp on the closing date - plan to have your application
+submitted well before hand in case of technical difficulties.
+• Remember that you are not just showing why your game is good, but showing your understanding
+of business development in the games industry and how you’re making good business decisions to
+lower your risk and give your studio its best chance for sustainability.
+CODE Funding Application Writing Guide | Last updated February 2026 | Page 2
+CODE FUNDING
+Application Writing Guide
+Main Application Document - Writing Guide
+Introduction
+• Give the assessors a very high overview of your game to get them ready to dive into the
+specifics of your game. This should include:
+• Your one-line elevator pitch;
+• A brief paragraph summarising your game;
+• A sentence or two identifying your main target audiences.
+Game Play
+• Give an overview of your game that explains the exceptional systems, features, and
+experiences of your current understanding of your full game.
+• Include things like:
+• Main gameplay style, genre, and theming;
+• Core gameplay loop(s) with descriptions of the main phases/features in these loops
+(tip: include diagrams);
+• How these systems/loops combine to make engaging gameplay;
+• A couple of examples of things like items, power ups, gear, or other features.
+• Highlight what mechanics and features will make your game stand out as your USPs
+(Unique Selling Points) and key differentiators.
+• If appropriate, provide a Narrative Design section to explain the extent of your narrative:
+• Describe your theming and how will present throughout your game;
+• Breakdown any applicable main plot points, how they are intertwined with gameplay,
+and what the ending to the narrative will be;
+• Include an excerpt of a script or dialogue as a supplementary document for narrative-
+heavy games.
+• Describe the accessibility features and accommodations you will be including in your game.
+Note: The point here is to show how your game will work as a whole and excite players within
+the genre without getting too far into the detail of describing every single mechanic, item,
+option, etc.
+CODE Funding Application Writing Guide | Last updated February 2026 | Page 3
+CODE FUNDING
+Application Writing Guide
+Art & Animation
+• Describe your intended art style for your game and include examples of concept art, key
+art, environment art, screenshots, gifs of animations, or assets of characters, items, etc, that
+you’ve made for your game if you have them.
+• It is more important for you to show the vision of what the final product will look like
+rather than current screenshots with lots of placeholder artwork.
+• Mention and include any influences you are drawing from, and explain what parts of these
+inspirations you are tying into your style.
+• Include the different feelings you are trying to invoke in your players.
+• UI or UI-mockups should also be included in this section.
+• If you are in the early stages of development, images of other games or other types of
+inspiration can be helpful in describing your intended style, but keep in mind:
+• This should serve as a demonstration in conjunction with some concept or character
+art.
+• Explain what part of these inspirational examples you plan to draw on.
+• Any art/screenshots that are from outside of your game must be labelled and credited.
+• Aim to have at least one or more parts of key art and/or examples of a game screen to
+show what the game will eventually look like to show what your vision is.
+A note on AI-art:
+• We appreciate that for many developers, providing professional-level concept art at an early
+design stage may not be feasible so many will resort to AI art generators.
+• Please label these “concept art only” in your application and know that Generated AI
+content can not be included in the final game as per our Terms and Conditions.
+• Be mindful that CODE is currently working on the premise that if there is a risk of
+infringement of intellectual property with the use of AI art in a game, we reserve the right
+to refuse funding.
+• Be mindful of use of AI art around Māori or Indigenous subject matter where it may not be
+appropriate.
+• If in doubt, talk to your Regional Content Manager or the Industry Development Manager
+before submitting.
+CODE Funding Application Writing Guide | Last updated February 2026 | Page 4
+CODE FUNDING
+Application Writing Guide
+Sound Design
+• Sound design is an integral part of your game and needs to be considered even at early
+stages.
+• Describe the choices you’re making around:
+• Music
+• Sound Effects (SFX)
+• Voice Acting (if applicable)
+• Include a playlist of original music or SFX (if you have any) and/or inspirational tracks and
+what specifically about these examples you want to highlight or apply to your game.
+• Describe the styles of music, if/how it will change throughout gameplay, the emotions
+you’re trying to evoke in your players, and any special systems or technology you plan to use
+(if any).
+• It is fine to include links or samples in your supplementary material.
+Production
+• Provide a few sentences describing what the grant will allow you do to develop your game.
+• Create a high level schedule for the development of your game including major features
+and milestones.
+• Discuss major production milestones and any challenges you may face as it is important
+that we see the full scope of production, not just the timeline that will be covered by the
+grant.
+• Consider including visual diagrams of the schedule.
+• Include all of your plans if you have more than one pathway to release (eg. with and without
+receiving a CODE grant, etc.).
+• Feel free to include a section on risk management. I.E. Identifying potential risks and what
+your team is going to do to actively mitigate them.
+• Please note that all production schedules should align with the hours within the Production
+Spreadsheet.
+Finances
+• At a KickStart level, we are not expecting definitive answers on where you expect to get
+additional funding from but we would like to see potentially realistic plans that you plan to
+pursue. Be mindful of actual sources and your strategy, rather than “we’re going to talk to
+publishers.”
+• At a StartUp level, we need to see the plans to fund the game through to launch in addition
+to any monies you may receive from CODE. These can include publisher advances (or
+intention to receive them), platform funding, venture capital funding, personal funds, or
+other methods.
+CODE Funding Application Writing Guide | Last updated February 2026 | Page 5
+CODE FUNDING
+Application Writing Guide
+Finances - contd.
+• Mention the current funding and/or time that has been put towards the project so far.
+• Include any relevant publishing deals, market attachments, commercial opportunities,
+completed crowdfunding efforts and raising attempts as a supplemental document and
+include a description of where you are within this process in the main document.
+• Note that this financial information will be paired with the Production Spreadsheet.
+Go-to-Market
+• Describe the audiences for your game, what is important to them (including demographics
+/ psychographics, playstyles, etc) and how you will reach and connect with these audiences.
+• Include your understanding about the genre(s) that you’re game is a part of.
+• Support your understanding of audience and genre with competitive analysis.
+• Describe how you will assess market validation:
+• Detail the types of data that you have analysed or will analyse to validate your game’s
+player engagement. Consider: Wishlist building (Steam and other platforms), online
+communities, playtesting, newsletters, in-person events and expos, publisher/investor/
+platform interest, Steam/curated events and festival/showcase engagement, external
+team collaborations, expert evaluations, crowd funding, content creator engagement,
+etc.
+• For KickStart grants, it’s not expected to see live evidence at this stage, however
+there needs to be an understanding of when and how you’ll be starting this process
+(which should be reflected in your marketing plan) and provide what your goals and
+expectations are within these metrics, how you will analyse them. If you have done
+some market validation already, please feel free to include this and provide an analysis
+of the process so far).
+• For StartUp grants, it’s expected that your team has started the market validation
+process for your game and have already begun analysing and adapting to this data.
+Detail what you’ve done and learned so far, and describe your current plan for the road
+ahead. Be sure to discuss your goals for key validation points and how you are working
+towards those goals.
+• Your market validation should reference the steps you’ll be taking as part of implementing
+your marketing plan and relate to your targeted audience groups.
+• Those who receive KickStart and StartUp grants will have the opportunity to work with
+an industry marketing expert to help you hone your marketing strategy. Include a section
+that details the specific areas that you would capitalise on this opportunity including any
+sticking points, and areas of uncertainty.
+• Note that you need to do the work of understanding the key marketing strategies that
+apply to your audience and product (game), and this additional marketing assistance
+will be to help with blind spots, course correction, etc.
+• Describe your game’s marketing plan, including:
+• Major marketing beats and schedule;
+CODE Funding Application Writing Guide | Last updated February 2026 | Page 6
+CODE FUNDING
+Application Writing Guide
+Go-to-Market - contd.
+• Where you’ll be connecting with your audiences;
+• How you’ll connect with your audiences in each of these places.
+• KickStart applications are expected to have a strong understanding of their audiences, how
+to connect with them, and have an understanding of the many ways to connect with them
+as part of their marketing plan and some exploration into the longer term marketing and
+Public Relations (PR) strategy.
+• StartUp applications are expected to include a solid marketing strategy - this could be a
+combination of; your social media presence(s), website, paid User Acquisition, PR-planning,
+advertising, platform and publisher planned-engagement or direct marketing activities -
+and likely have started executing this strategy or have made significant preparations to do
+so.
+• Consider including a high-level visual diagram of the Marketing Plan.
+Teams
+• A brief introduction of your team members should be included in the Main Application
+Document. Note: It is important to demonstrate that not only is the project viable but the
+team behind it also has the capability to see the project to launch.
+• Include both core members and the expanded team including contractors, consultants,
+mentors, etc.
+• CVs must be included as supplemental documents for all core team members, and, apart
+from serious games where academic credibility may be relevant, keep them to the relevant
+highlights and one page only for the assessors.
+• While CODE appreciates you may not be able to contract team members unless you receive
+the grant, you should know who they will be, especially in key roles or if you are a tiny team.
+• For larger teams, it is fine to indicate funding may go to, say, a junior designer who is not yet
+recruited - but not an Art Director.
+• Be sure that you’ve communicated with everyone you list that is working on your game,
+and please note, email addresses must be supplied for named team members and all team
+members will be emailed to ensure they are not misrepresented as being attached to the
+project.
+• Feel free to include any additional info about your studio’s goals and values.
+Builds
+• When applying specifically for StartUp funding a prototype will be necessary for your
+application. This does not have to be a polished, investment-ready demo that you would
+show a publisher or financial partner but it should be at a stage where the assessor can
+understand the feel of the game. Include install and playing instructions if necessary.
+CODE Funding Application Writing Guide | Last updated February 2026 | Page 7
+CODE FUNDING
+Application Writing Guide
+Builds - contd.
+• For KickStart funding, submitting a build is not necessary as this level is designed for earlier
+stage projects, however if you are applying for funds to help you get to the Vertical Slice
+stage of development, and your build can be played by the assessors without significant
+instruction, it may be relevant.
+• All builds will be downloaded at time of submission and will not be able to be updated
+during the assessment process.
+• Feel free to include build notes to describe any notable information.
+Final Note
+Information regarding the above points will give your application the best chance possible. It is
+your responsibility to sell the concept of your game and business strategy to the assessor panel,
+convince them that you understand the business of games, and to identify and mitigate risks,
+well enough in order for your studio to be sustainable. Remember that the assessors will not
+assume any knowledge or understandings are held by default, and will only be able to assess
+what you include in your application.
+CODE Funding Application Writing Guide | Last updated February 2026 | Page 8
+CODE FUNDING
+Application Writing Guide
