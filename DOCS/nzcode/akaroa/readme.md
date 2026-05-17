@@ -372,10 +372,51 @@ This pipeline means the team already has a substantial library of 3D assets (cha
 <td><em>Griffin top view - wings spread in flight pose</em></td>
 </tr>
 <tr>
-<td width="100%"><img src="../images/Captura_de_pantalla_2025-05-07_a_las_11.44.45_a._m..png" width="100%"/></td>
+<td colspan="2"><img src="../images/Captura_de_pantalla_2025-05-07_a_las_11.44.45_a._m..png" width="100%"/></td>
 </tr>
 <tr>
-<td><em>Griffin rigged skeleton - bone structure for animation</em></td>
+<td colspan="2"><em>Griffin rigged skeleton - bone structure for animation</em></td>
+</tr>
+</table>
+
+**Assets/NPC 3D creation timelapses:**
+
+<table>
+<tr>
+<td width="50%"><a href="https://www.youtube.com/watch?v=vi4Ulp1F2iw"><img src="https://img.youtube.com/vi/vi4Ulp1F2iw/0.jpg" width="100%"/></a></td>
+<td width="50%"><a href="https://www.youtube.com/watch?v=BFrtv3MMZsw"><img src="https://img.youtube.com/vi/BFrtv3MMZsw/0.jpg" width="100%"/></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://www.youtube.com/watch?v=o6Ovecv9UvE"><img src="https://img.youtube.com/vi/o6Ovecv9UvE/0.jpg" width="100%"/></a></td>
+<td width="50%"><a href="https://www.youtube.com/watch?v=iwdyD7043e8"><img src="https://img.youtube.com/vi/iwdyD7043e8/0.jpg" width="100%"/></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://www.youtube.com/watch?v=w2IjJ6cctrk"><img src="https://img.youtube.com/vi/w2IjJ6cctrk/0.jpg" width="100%"/></a></td>
+<td width="50%"><a href="https://www.youtube.com/watch?v=GKmg5arcXCw"><img src="https://img.youtube.com/vi/GKmg5arcXCw/0.jpg" width="100%"/></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://www.youtube.com/watch?v=BwTVLQACd48"><img src="https://img.youtube.com/vi/BwTVLQACd48/0.jpg" width="100%"/></a></td>
+<td width="50%"><a href="https://www.youtube.com/watch?v=Kva8Nuk9m9A"><img src="https://img.youtube.com/vi/Kva8Nuk9m9A/0.jpg" width="100%"/></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://www.youtube.com/watch?v=I3i4gf-1Bfc"><img src="https://img.youtube.com/vi/I3i4gf-1Bfc/0.jpg" width="100%"/></a></td>
+<td width="50%"><a href="https://www.youtube.com/watch?v=qwzv6NjkPOc"><img src="https://img.youtube.com/vi/qwzv6NjkPOc/0.jpg" width="100%"/></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://www.youtube.com/watch?v=YePNfYZOKDQ"><img src="https://img.youtube.com/vi/YePNfYZOKDQ/0.jpg" width="100%"/></a></td>
+<td width="50%"><a href="https://www.youtube.com/watch?v=gjdoNawTEAU"><img src="https://img.youtube.com/vi/gjdoNawTEAU/0.jpg" width="100%"/></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://www.youtube.com/watch?v=H3J2UhzKBno"><img src="https://img.youtube.com/vi/H3J2UhzKBno/0.jpg" width="100%"/></a></td>
+<td width="50%"><a href="https://www.youtube.com/watch?v=bpF8ptif5yU"><img src="https://img.youtube.com/vi/bpF8ptif5yU/0.jpg" width="100%"/></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://www.youtube.com/watch?v=nAAUnraoIeI"><img src="https://img.youtube.com/vi/nAAUnraoIeI/0.jpg" width="100%"/></a></td>
+<td width="50%"><a href="https://www.youtube.com/watch?v=CerKFlG-S2k"><img src="https://img.youtube.com/vi/CerKFlG-S2k/0.jpg" width="100%"/></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://www.youtube.com/watch?v=hotuqptg3F4"><img src="https://img.youtube.com/vi/hotuqptg3F4/0.jpg" width="100%"/></a></td>
+<td width="50%"></td>
 </tr>
 </table>
 
