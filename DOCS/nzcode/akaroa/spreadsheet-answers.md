@@ -14,7 +14,7 @@ Ready-to-copy values for each tab in the CODE Production Spreadsheet.
 | Project Name / Codename | Project Akaroa |
 | CODE Funding application type | KickStart |
 | Best estimate of weeks to complete | 52 |
-| Please enter here any cash funding from you / your team | $5,000.00 |
+| Please enter here any cash funding from you / your team | $15,000.00 |
 | Please enter here any additional external investment you have secured | $0 |
 
 The following fields auto-calculate from the other tabs — do not enter manually:
@@ -77,10 +77,10 @@ Enter each row as a separate service. All NZ-based.
 
 | Item | Cost | Funded By |
 | --- | --- | --- |
-| Equipment (hardware, peripherals) | $3,000 | Personal cash investment |
-| Office / workspace costs | $2,000 | Personal cash investment |
+| Equipment (hardware, peripherals) | $8,000 | Personal cash investment |
+| Office / workspace costs | $7,000 | Personal cash investment |
 
-**Other Costs Total:** $5,000
+**Other Costs Total:** $15,000
 
 ---
 
@@ -94,10 +94,10 @@ Once all tabs are filled in, the Summary tab should auto-calculate to:
 | Additional Service Costs (Allowed Spend) | $2,000 |
 | Assets and License Costs (Allowed Spend) | $1,000 |
 | Allowable Expenditure for funding | $60,000 |
-| Other costs - office etc (Prohibited Spend) | $5,000 |
+| Other costs - office etc (Prohibited Spend) | $15,000 |
 | % spent outside New Zealand using CODE funding | 19.99% |
-| Investment required on top of CODE Funding | $5,000 |
-| Cash funding from you / your team | $5,000 |
+| Investment required on top of CODE Funding | $15,000 |
+| Cash funding from you / your team | $15,000 |
 | Additional external investment secured | $0 |
 | Balance (contingency reserve) | $0 |
 | Does your allowable expenditure fit within your funding limits? | Y |
@@ -113,9 +113,9 @@ These are the fields the Summary tab says to copy back:
 | --- | --- |
 | CODE Funding Request | $60,000 |
 | In kind funding from equity holders | $900,000 |
-| Cash funding from you / your team | $5,000 |
+| Cash funding from you / your team | $15,000 |
 | Funding from any other sources | $0 |
-| Total budget | $65,000 |
+| Total budget | $75,000 |
 | Best estimate of weeks to complete | 52 |
 
 ---

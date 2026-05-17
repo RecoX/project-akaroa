@@ -576,6 +576,14 @@ Every experiment informed the final architecture. The team is not learning how t
 <td><em>World editor - Town building tools</em></td>
 <td><em>Building asset - 3D to tile rendering</em></td>
 </tr>
+<tr>
+<td width="50%"><img src="../images/tool%20for%20icons.png" width="100%"/></td>
+<td width="50%"><img src="../images/topo.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Icon sprite editor — custom tooling for item assets</em></td>
+<td><em>Mole Miner — 3D creature model</em></td>
+</tr>
 </table>
 
 ### High-Level Production Schedule
@@ -629,8 +637,8 @@ Additionally, Lucas Recoaro has contributed nine years of consistent development
 | Source | Amount | Status |
 |---|---|---|
 | CODE KickStart Grant | $60,000 | Applied |
-| Personal cash investment | $5,000 | Confirmed |
-| **Total prototype budget** | **$65,000** | |
+| Personal cash investment | $15,000 | Confirmed |
+| **Total prototype budget** | **$75,000** | |
 
 ### Post-Prototype Funding Strategy
 
@@ -649,8 +657,8 @@ At KickStart level, definitive answers on post-prototype funding are not expecte
 | Team Costs | $45,001 | $11,999 | $0 | $57,000 |
 | Additional Service Costs | $2,000 | $0 | $0 | $2,000 |
 | Assets and Licenses | $1,000 | $0 | $0 | $1,000 |
-| Other Costs (Prohibited) | $0 | $0 | $5,000 | $5,000 |
-| **Totals** | **$48,001** | **$11,999** | **$5,000** | **$65,000** |
+| Other Costs (Prohibited) | $0 | $0 | $15,000 | $15,000 |
+| **Totals** | **$48,001** | **$11,999** | **$15,000** | **$75,000** |
 
 **Allowable expenditure (CODE funded):** $60,000
 **Overseas spend as % of CODE funding:** 19.99% (under 20% threshold)

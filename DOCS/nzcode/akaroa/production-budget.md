@@ -13,12 +13,12 @@
 | Team Costs | $45,001 | $11,999 | $0 | $57,000 |
 | Additional Service Costs | $2,000 | $0 | $0 | $2,000 |
 | Assets and License Costs | $1,000 | $0 | $0 | $1,000 |
-| Other Costs (Prohibited) | $0 | $0 | $5,000 | $5,000 |
-| **Totals** | **$48,001** | **$11,999** | **$5,000** | **$65,000** |
+| Other Costs (Prohibited) | $0 | $0 | $15,000 | $15,000 |
+| **Totals** | **$48,001** | **$11,999** | **$15,000** | **$75,000** |
 
 **Allowable expenditure (CODE funded):** $60,000
 **Overseas spend as % of CODE funding:** 19.99% (under 20% threshold)
-**Prohibited spend (self funded):** $5,000
+**Prohibited spend (self funded):** $15,000
 
 ---
 
@@ -58,15 +58,15 @@ Note: If any team member is overseas, their cost goes to "CODE Funded (Overseas)
 
 ---
 
-## Other Costs (Prohibited Spend) — $5,000
+## Other Costs (Prohibited Spend) — $15,000
 
 These costs are not eligible for CODE funding and are covered by personal investment.
 
 | Item | Total | Funded By |
 | --- | --- | --- |
-| Equipment (hardware, peripherals) | $3,000 | Personal cash |
-| Office / workspace costs | $2,000 | Personal cash |
-| **Subtotal** | **$5,000** | |
+| Equipment (hardware, peripherals) | $8,000 | Personal cash |
+| Office / workspace costs | $7,000 | Personal cash |
+| **Subtotal** | **$15,000** | |
 
 ---
 
@@ -75,8 +75,8 @@ These costs are not eligible for CODE funding and are covered by personal invest
 | Source | Amount | Status | Evidence Required |
 | --- | --- | --- | --- |
 | CODE KickStart Grant | $60,000 | Applied | — |
-| Personal cash investment | $5,000 | Confirmed | Bank statement |
-| **Total** | **$65,000** | | |
+| Personal cash investment | $15,000 | Confirmed | Bank statement |
+| **Total** | **$75,000** | | |
 
 **Contingency reserve:** None — personal cash covers prohibited spend exactly.
 

@@ -190,10 +190,10 @@ Clear example rows. Enter:
 
 | Row | Item | Lump Sum |
 |-----|------|----------|
-| 8 | Equipment (hardware, peripherals) | $3,000 |
-| 9 | Office / workspace costs | $2,000 |
+| 8 | Equipment (hardware, peripherals) | $8,000 |
+| 9 | Office / workspace costs | $7,000 |
 
-**Total: $5,000** (self-funded, not CODE)
+**Total: $15,000** (self-funded, not CODE)
 
 ---
 
@@ -209,7 +209,7 @@ Clear example rows. Enter:
 | Project Name / Codename | Project Akaroa |
 | CODE Funding application type | KickStart |
 | Best estimate of weeks to complete | 52 |
-| Cash funding from you / your team | $5,000 |
+| Cash funding from you / your team | $15,000 |
 | Additional external investment secured | $0 |
 
 ### Expected auto-calculated values:
@@ -220,10 +220,10 @@ Clear example rows. Enter:
 | Additional Service Costs (Allowed Spend) | $2,000 |
 | Assets and License Costs (Allowed Spend) | $1,000 |
 | Allowable Expenditure for funding | $60,000 |
-| Other costs (Prohibited Spend) | $5,000 |
+| Other costs (Prohibited Spend) | $15,000 |
 | % spent outside NZ using CODE funding | 19.99% |
 | In kind funding from equity holders | $900,000 |
-| Cash funding from you / your team | $5,000 |
+| Cash funding from you / your team | $15,000 |
 | Balance | $0 |
 | Does your allowable expenditure fit within funding limits? | Y |
 | Form Status | Green ✓ |
