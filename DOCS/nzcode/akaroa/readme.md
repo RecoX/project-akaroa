@@ -314,11 +314,9 @@ This pipeline means the team already has a substantial library of 3D assets (cha
 <td><em>Dwarf Crossbowman — 3D character</em></td>
 </tr>
 <tr>
-<td width="50%"><img src="../images/999image.png" width="100%"/></td>
 <td width="50%"><img src="../images/ingame12image.png" width="100%"/></td>
 </tr>
 <tr>
-<td><em>Dwarf King — high-detail 3D character model</em></td>
 <td><em>In-game graveyard — characters in a dark environment</em></td>
 </tr>
 </table>
