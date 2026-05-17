@@ -1,9 +1,9 @@
-# Project Akaroa — Main Application Document
+# Project Akaroa, Main Application Document
 
 **Applicant:** Conreco Limited
-**Primary Contact:** Lucas Recoaro — lucas.recoaro@gmail.com
-**Funding Type:** CODE Start Up Grant
-**Funding Requested:** $250,000 NZD
+**Primary Contact:** Lucas Recoaro, lucas.recoaro@gmail.com
+**Funding Type:** CODE KickStart Grant
+**Funding Requested:** $60,000 NZD
 **Project Codename:** Project Akaroa
 
 ---
@@ -12,316 +12,697 @@
 
 ### Elevator Pitch
 
-Project Akaroa is an MMORPG built around a player-driven peer-to-peer trading economy where everything of value is earned, crafted, or traded — not bought. No pay-to-win, no cash shop shortcuts. Players build wealth and reputation through skill, effort, and commerce with each other in a persistent online world powered by classic MMO systems.
+Project Akaroa is a persistent online world where players build wealth through skill, effort, and commerce with each other. A 2.5D isometric MMORPG with faction warfare, real-time combat, and a peer-to-peer marketplace — from the developers of Argentum Online, designed for players tired of cash shops deciding who wins.
 
 ### Game Summary
 
-Project Akaroa is a massively multiplayer online role-playing game set in an original fantasy world. Players explore vast open environments — from volcanic highlands and dense forests to coastal settlements and underground cave networks — while progressing through interconnected systems of combat, crafting, exploration, and community building.
+Project Akaroa is a massively multiplayer online role-playing game that takes the proven gameplay systems, player-driven economy, and faction-based PvP of Argentum Online and migrates them into a modern engine with original art, original music, and a new fantasy world. The game features real-time combat, a peer-to-peer marketplace for characters and items, a faction warfare system, crafting, and open-world exploration — all systems that have been validated with a live player base over years of operation.
 
-The game targets the mid-core MMO audience on PC (Steam), with plans to expand to mobile and consoles. The design philosophy prioritises approachable depth: systems that are easy to learn but reward long-term mastery. The world is persistent and shared, supporting hundreds of concurrent players per server instance, with content designed for solo, small-group, and large-scale cooperative play.
+The developer has been working on Argentum Online since 2017, with focused technology migration experiments beginning in 2020 using Unity and C++ server-side, before settling on Godot 4 (client) with Rust/C++ server architecture. Every core system in Project Akaroa has been prototyped and tested in production through Argentum Online's live environment and dedicated Battle Server.
 
 ### Target Audiences
 
-- Mid-core MMO players (25–40) who enjoy progression-driven online worlds and are looking for a fresh setting and identity beyond the standard fantasy offerings.
-- Lapsed MMO players seeking a new world to invest in with a distinctive cultural flavour.
-- Latin American MMO players — a large, passionate, and growing market with deep cultural ties to online RPGs (Argentum Online, Tibia, MU Online, and Ragnarok Online have massive followings across the region). The founder's Argentine background and experience shipping Argentum Online on Steam provide a direct connection to this audience and an understanding of what resonates with them.
-- Collectors and completionists — players who enjoy hunting rare items, cosmetics, mounts, and achievements. Project Akaroa features tradeable collectible characters and items that can be exchanged between players through the P2P economy, adding replayability and social value to every rare find.
+**Primary: Latin American MMO Players (18–35)**
+Latin America has one of the most passionate and established MMO communities in the world. Titles like Argentum Online, Tibia, MU Online, and Ragnarok Online have maintained active player bases for over two decades — these aren't nostalgia players, they're active daily users. This audience values community, social interaction, PvP, and accessible gameplay over high-end graphics. They reject pay-to-win aggressively. The founder's Argentine background, native Spanish fluency, and track record shipping Argentum Online on Steam provide a direct, zero-cost acquisition channel to this market.
+
+Existing community reach (Argentum Online):
+- 80,000+ accounts created (direct email targeting potential)
+- Steam: ~200 concurrent players, 821 reviews (Mostly Positive), Free to Play
+- Discord: 5,800 members
+- Twitch: 4,800 followers
+- Instagram: 1,600 followers
+- MarketAO: 976 completed transactions, US$90,332 distributed to the community
+- Press coverage: Pagina 12, La Nacion, El Dia (major Argentine newspapers)
+- Patreon: 1,214 active members (470 paid), growing steadily since 2021
+
+<table>
+<tr>
+<td width="100%"><img src="../images/patreon.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Patreon community growth — Active members over time</em></td>
+</tr>
+</table>
+
+These are players who already play the exact genre Project Akaroa is building in — reachable immediately without paid acquisition.
+
+**Secondary: Global Mid-core MMO Players (25–40)**
+Players with deep MMO experience (World of Warcraft, Guild Wars 2, RuneScape, Albion Online) who are fatigued by monetisation-heavy games. They want a persistent world where progression is earned, not purchased. The "no pay-to-win, player-driven economy" positioning resonates strongly — it's the number one complaint in every MMO community. These players will find Project Akaroa through Steam discovery, content creators, and word-of-mouth.
+
+**Tertiary: Mobile and Multiplatform Players**
+The isometric MMORPG format translates naturally to mobile and tablet. Games like Albion Online and Old School RuneScape have proven that this audience exists and is willing to play the same persistent world across devices. Project Akaroa's Godot 4 engine supports multiplatform deployment natively, and the game's control scheme (tap-to-move, hotkey abilities) maps directly to touch input. This opens the massive mobile gaming markets in Southeast Asia, Brazil, and the broader international audience who consume MMOs primarily on mobile.
+
+**Quaternary: Collectors and Traders**
+Players who gravitate toward games with real economies — RuneScape's Grand Exchange, CS2's skin market, Diablo's trading. They enjoy finding rare items, flipping markets, and building wealth. Project Akaroa's P2P marketplace (MAO — Mercado Argentum Online) for both items and characters creates a trading ecosystem that gives every gameplay session tangible economic value. This audience is highly engaged, highly retentive, and drives organic word-of-mouth.
 
 ---
 
 ## 2. Gameplay
 
-### Genre and Style
+### Heritage: Argentum Online as the Foundation
 
-Project Akaroa is a top-down centric isometric MMORPG with real-time combat, open-world exploration, crafting, and social systems. The tone balances adventure and wonder with grounded, community-driven gameplay — less high-fantasy epic, more lived-in world.
+Project Akaroa is not being designed in a vacuum. Its gameplay systems are direct evolutions of Argentum Online (AO), a classic Argentine top-down isometric MMORPG originally released on December 30, 1999, that has maintained active servers and a dedicated community for over two decades across Latin America. The founder has operated AO since 2017 and released it on Steam, accumulating deep knowledge of what works in this genre through live player data and community feedback.
+
+Every system described below has been validated in production with real players. The KickStart prototype will take these proven systems and implement them in Godot 4 with modern technology, original assets, and a new world setting.
+
+**Reference:** [Argentum Online Wiki](https://www.argentumonline.com.ar/wiki)
+
+<table>
+<tr>
+<td width="50%"><img src="../images/image.png" width="100%"/></td>
+<td width="50%"><img src="../images/1image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Town NPCs and shops — Isometric gameplay view</em></td>
+<td><em>Carpentry workshop — Crafting NPC interaction</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/2image.png" width="100%"/></td>
+<td width="50%"><img src="../images/4image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Temple and priestess — Healing and resurrection</em></td>
+<td><em>Magic shop — Spell vendor NPC</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/5image.png" width="100%"/></td>
+<td width="50%"><img src="../images/11image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Blacksmith NPC — Equipment trading dialogue</em></td>
+<td><em>Island world — Minimap navigation</em></td>
+</tr>
+</table>
 
 ### Core Gameplay Loop
 
 ```
-Explore → Discover → Engage → Progress → Contribute → Explore
+Explore → Combat → Loot → Trade → Progress → Explore
 ```
 
-1. **Explore** — Players traverse open zones with distinct biomes (volcanic plateaus, rainforest, coastal cliffs, underground geothermal caves). Exploration is rewarded with discoverable lore, hidden resources, and environmental storytelling.
+1. **Explore** — Players traverse an open world with distinct biomes. Exploration reveals resources, enemies, quest NPCs, and hidden areas.
+2. **Combat** — Real-time top-down combat with keyboard-driven movement, hotkey abilities, and positioning. Supports melee, ranged, and magic archetypes.
+3. **Loot** — Enemies and world interactions drop items, gold, and rare equipment. Rarity drives the economy.
+4. **Trade** — Players trade directly with each other through the P2P marketplace. No auction house controlled by the game — all commerce is between players.
+5. **Progress** — Character advancement through experience, skill development, faction rank, and gear acquisition. Both vertical (power) and horizontal (breadth of capability) progression.
 
-2. **Discover** — Points of interest, dynamic events, and NPC encounters emerge organically. Discovery feeds into quest chains, crafting recipes, and world knowledge.
+### Races and Classes
 
-3. **Engage** — Real-time combat against creatures and environmental hazards. Players choose from archetypes (e.g., Guardian, Wayfinder, Shaper, Caller) that define their combat role but allow hybrid builds through a skill-tree system.
+Inherited from AO's proven system, Project Akaroa features multiple playable races (Humans, Elves, Dark Elves, Dwarves, Gnomes) each with distinct attribute bonuses and playstyle tendencies. Classes determine combat role: Warriors, Mages, Assassins, Paladins, Druids, Bards, Clerics, and Hunters — each with unique skill progressions and equipment requirements.
 
-4. **Progress** — Character advancement through experience, gear crafting, skill unlocks, and reputation with regional factions. Progression is horizontal as well as vertical — players gain breadth of capability, not just power.
+Skills are classified into four families: magical, combat, professions, and social. The higher the skill level, the more effective the player becomes, creating a rewarding long-term progression curve that has kept AO players engaged for years.
 
-5. **Contribute** — Players contribute to persistent community projects: building and upgrading shared settlements, opening trade routes, and unlocking server-wide content through collective effort.
+### Faction Warfare System
 
-### Combat System
+The world is divided by a core factional conflict that drives PvP gameplay and community organisation:
 
-- Real-time isometric combat with keyboard-driven movement, hotkey abilities, dodge, and positioning mechanics. Supports both keyboard and mouse and gamepad input.
-- Four base archetypes with branching skill trees allowing hybrid roles.
-- Group content scales from solo encounters to 20-player raid-style events.
-- Dynamic world events that spawn based on player activity and time cycles.
+- **Armada Real (Royal Army):** The forces of order. Players must prove themselves by eliminating criminals (50 kills minimum) and reaching Level 25 to enlist. Members progress through ranks — Apprentice, Knight, Guardian, Champion of Light — each requiring increasing kills, gold, and level thresholds. The faction enforces strict codes of conduct: members must defend citizens, cannot ally with criminals, and face expulsion for violations.
 
-### Crafting and Economy
+- **Legión Oscura (Dark Legion):** The forces of chaos. Players who embrace the criminal path can join by killing 50 citizens and reaching Level 25. Ranks progress from Minion through Dark Knight, Condemned Protector, Soul Devourer, to Chaos Bearer. The Legion has its own exclusive city, equipment requirements per class and level, and internal hierarchy with councils.
 
-- Resource gathering tied to exploration (mining, foraging, fishing, woodcutting).
-- Player-driven economy with trading posts in settlements.
-- Crafting produces gear, consumables, building materials, and cosmetic items.
-- Rare recipes discovered through exploration and quest completion.
+- **Neutral / Independent:** Players who choose neither faction, operating as citizens or criminals outside the formal faction structure.
 
-### Social and Community Systems
+**Above factions sit player-created Guilds** — alliances formed between users that add another layer of social organisation, territory control, and group identity. Guilds operate across faction lines and create emergent political dynamics.
 
-- Player-built and upgraded settlements that serve as social hubs.
-- Guild system with shared objectives and territory management.
-- Mentorship mechanics that reward experienced players for helping newcomers.
-- Seasonal server-wide events tied to real-world and in-game calendars.
+This system has been running live in AO for years. It creates organic, player-driven conflict and community structure that no scripted content can replicate. Project Akaroa will implement this same factional framework with the new world's lore.
+
+<table>
+<tr>
+<td width="50%"><img src="../images/3321image.png" width="100%"/></td>
+<td width="50%"><img src="../images/opimage.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Dark Legion throne room — Faction headquarters</em></td>
+<td><em>Player tests — community playtesting session</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/Tancredo.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Tancredo (Royal King) — full 3D render</em></td>
+</tr>
+</table>
+
+### P2P Marketplace (MarketAO Model)
+
+One of Project Akaroa's strongest differentiators is its peer-to-peer marketplace for both items and characters. Based on the MarketAO system running in Argentum Online:
+
+- **Item Trading:** Players list items for sale at their own prices. Buyers browse and purchase directly from other players. No game-controlled auction house — the economy is entirely player-driven, creating real supply/demand dynamics.
+- **Character Trading:** Players can list entire characters for sale or trade. This creates a secondary market where time investment has tangible value, and players can enter the game at different progression points.
+- **No Pay-to-Win:** Nothing in the marketplace is generated by the game or sold by the developer. Every item and character was earned by a player through gameplay. The marketplace simply facilitates player-to-player commerce.
+
+This model has been validated live with the AO community. It drives long-term engagement because players know their time investment has real value within the game's economy.
+
+**Reference:** [MarketAO](https://www.argentumonline.com.ar/mercadoao)
+
+<table>
+<tr>
+<td width="50%"><img src="../images/0image.png" width="100%"/></td>
+<td width="50%"><img src="../images/12555image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Merchant trading UI — Player-driven commerce</em></td>
+<td><em>Bank storage system — Item management</em></td>
+</tr>
+</table>
 
 ### Unique Selling Points
 
-- A persistent MMO world with a player-driven economy and no pay-to-win — there is no other isometric MMORPG offering this combination.
-- Tradeable collectible characters and rare items exchangeable between players, driving replayability and social engagement through the P2P economy.
-- Horizontal progression alongside vertical — players gain both power and breadth of capability, keeping long-term engagement rewarding.
-- Community contribution systems where collective player effort shapes the world.
-
-### Accessibility
-
-- Fully remappable controls and input support (keyboard/mouse, controller).
-- Scalable UI with adjustable text size, colour-blind modes, and high-contrast options.
-- Combat difficulty scaling for solo content.
-- Text-to-speech and speech-to-text for in-game chat.
-- Subtitles and visual indicators for all audio cues.
-
-### Narrative Design
-
-Project Akaroa's world is built on layered lore rather than a single linear storyline. The narrative is delivered through:
-
-- **Environmental storytelling** — Ruins, abandoned settlements, and landmarks tell the history of the world without requiring dialogue. Players piece together the story through exploration.
-- **Regional quest chains** — Each zone has its own self-contained storyline tied to local factions, conflicts, and characters. These chains introduce the world's history and politics while rewarding progression.
-- **World events** — Server-wide narrative events unfold over time, driven by collective player activity. These events change the state of the world and create shared stories within the community.
-- **NPC dialogue** — Key NPCs deliver lore and quest context through concise, voiced dialogue. The writing style is grounded and understated — characters speak like real people, not fantasy archetypes.
-
-The narrative is designed to reward curiosity without gating gameplay behind story progression. Players who want to engage with the lore can dig deep; players who want to focus on combat, crafting, or trading can do so without missing critical mechanics.
+- A persistent MMO world with a fully player-driven P2P economy — no pay-to-win, no cash shop.
+- Faction warfare system validated over years of live operation with real players.
+- Character and item trading marketplace creating tangible value for player time investment.
+- Nine years of live data and community feedback informing every design decision.
+- Multiplatform target (PC, mobile, console) using modern engine technology.
 
 ---
 
 ## 3. Art and Animation
 
+### Art Pipeline: 3D to 2D Sprite Migration
+
+Project Akaroa's art pipeline is built on an innovative workflow developed during Argentum Online's ongoing development:
+
+1. **3D Modelling** — All characters, NPCs, items, and environmental objects are built as full 3D models.
+2. **Sprite Rendering** — The 3D models are rendered down to 2D sprite sheets for use in the isometric game view. This gives pixel-perfect control over the final look while maintaining the flexibility of 3D source assets.
+3. **Dual-Use for Project Akaroa** — Because the source assets are already in 3D, Project Akaroa can use them directly as full 3D graphics in its 2.5D environment. The existing art library built for AO becomes immediately usable at higher fidelity.
+
+This pipeline means the team already has a substantial library of 3D assets (characters, NPCs, items, equipment) that can be deployed in Project Akaroa's 2.5D world without starting from scratch. New assets follow the same pipeline, ensuring visual consistency.
+
+**3D model → 2D sprite pipeline demonstration:**
+
+<table>
+<tr>
+<td width="50%"><img src="../images/aimage.png" width="100%"/></td>
+<td width="50%"><img src="../images/vimage.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>3D troll alongside its rendered 2D sprite in-game</em></td>
+<td><em>Full 3D troll model — source asset</em></td>
+</tr>
+</table>
+
+**Before and after — 3D models replacing legacy sprites:**
+
+<table>
+<tr>
+<td width="50%"><img src="../images/pirate%20old.png" width="100%"/></td>
+<td width="50%"><img src="../images/pirate%20new.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Pirate NPC — old 2D sprite</em></td>
+<td><em>Pirate NPC — new 3D model</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/chaos%20king%20old.png" width="100%"/></td>
+<td width="50%"><img src="../images/chaos%20king.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Chaos King — old 2D sprite</em></td>
+<td><em>Chaos King — new 3D model</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/tancredo%20old.jpeg" width="100%"/></td>
+<td width="50%"><img src="../images/tancredo%20new.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Tancredo (Royal King) — old 2D sprite</em></td>
+<td><em>Tancredo (Royal King) — new 3D model</em></td>
+</tr>
+</table>
+
+**3D character models ready for Project Akaroa:**
+
+<table>
+<tr>
+<td width="50%"><img src="../images/12image.png" width="100%"/></td>
+<td width="50%"><img src="../images/132image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Skeleton King — 3D boss character</em></td>
+<td><em>Dark Elf warrior — 3D character</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/155image.png" width="100%"/></td>
+<td width="50%"><img src="../images/123image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Dark Elf rogue — 3D character</em></td>
+<td><em>Dragon creature — 3D enemy model</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/53image.png" width="100%"/></td>
+<td width="50%"><img src="../images/32image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Prisoner NPC — 3D model</em></td>
+<td><em>Steampunk golem — 3D model rotations</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/765Anubis.png" width="100%"/></td>
+<td width="50%"><img src="../images/66GoblinFondo.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Anubis — 3D boss model</em></td>
+<td><em>Goblin — 3D enemy model</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/11Montura.png" width="100%"/></td>
+<td width="50%"><img src="../images/1123image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Mount — 3D rideable creature</em></td>
+<td><em>Orc warrior — 3D model with rigging</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/Elfo_Mago.png" width="100%"/></td>
+<td width="50%"><img src="../images/Mago_del_Caos.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Elf Mage — 3D character</em></td>
+<td><em>Chaos Mage — 3D character</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/Mago_Imperial.png" width="100%"/></td>
+<td width="50%"><img src="../images/Guardia_Enano.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Imperial Mage — 3D character</em></td>
+<td><em>Dwarf Guard — 3D character</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/Guardia_Elfo.png" width="100%"/></td>
+<td width="50%"><img src="../images/Rey_Elfo.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Elf Guard — 3D character</em></td>
+<td><em>Elf King — 3D character</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/Rey_Enano.png" width="100%"/></td>
+<td width="50%"><img src="../images/Elfo_Rey_Trono.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Dwarf King — 3D character</em></td>
+<td><em>Elf King on Throne — 3D scene</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/Enano_Rey_Trono.png" width="100%"/></td>
+<td width="50%"><img src="../images/Enano_Ballestero.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Dwarf King on Throne — 3D scene</em></td>
+<td><em>Dwarf Crossbowman — 3D character</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/999image.png" width="100%"/></td>
+<td width="50%"><img src="../images/ingame12image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Dwarf King — high-detail 3D character model</em></td>
+<td><em>In-game graveyard — characters in a dark environment</em></td>
+</tr>
+</table>
+
+**Mount system — 3D armored horse variants:**
+
+<table>
+<tr>
+<td width="50%"><img src="../images/improve%201.png" width="100%"/></td>
+<td width="50%"><img src="../images/improve%202.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Knight war horse — armored mount with barding</em></td>
+<td><em>Cavalry horse — leather and plate armor variant</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/improve%203.png" width="100%"/></td>
+<td width="50%"><img src="../images/improve%205.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Dark Legion war horse — evil faction mount</em></td>
+<td><em>Elven horse — ornate turquoise-accented mount</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/improve%206.png" width="100%"/></td>
+<td width="50%"><img src="../images/improve%207.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Undead horse and beast mount — skeletal variants</em></td>
+<td><em>Mule and riding pony — utility mounts</em></td>
+</tr>
+</table>
+
+**3D modelling workflow in Blender:**
+
+<table>
+<tr>
+<td width="50%"><img src="../images/montu.png" width="100%"/></td>
+<td width="50%"><img src="../images/captura8.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Mount model — rendered sprite from 3D source</em></td>
+<td><em>Horse model in Blender viewport — texture painting stage</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/captura6.png" width="100%"/></td>
+<td width="50%"><img src="../images/captura5.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Griffin head sculpt — high-poly detail work</em></td>
+<td><em>Griffin wing feathers — particle/geometry system in Blender</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/captura%203.png" width="100%"/></td>
+<td width="50%"><img src="../images/Captura_de_pantalla_2025-05-07_a_las_11.44.32_a._m..png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Griffin full body — sculpted creature model</em></td>
+<td><em>Griffin top view — wings spread in flight pose</em></td>
+</tr>
+<tr>
+<td width="100%"><img src="../images/Captura_de_pantalla_2025-05-07_a_las_11.44.45_a._m..png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Griffin rigged skeleton — bone structure for animation</em></td>
+</tr>
+</table>
+
+**2D sprite sheets rendered from 3D models:**
+
+<table>
+<tr>
+<td width="50%"><img src="../images/4104.png" width="100%"/></td>
+<td width="50%"><img src="../images/4106.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>NPC sprite sheets — merchants, vendors, boats</em></td>
+<td><em>Character sprite sheets — blacksmiths, warriors</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/15image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Armored character — rendered sprite</em></td>
+</tr>
+</table>
+
 ### Art Style
 
-Project Akaroa uses a richly detailed 2.5D isometric art style — combining hand-crafted tile sets and sprite work with layered depth effects. The palette draws from a range of natural tones: deep greens, volcanic blacks and reds, ocean blues, and warm golden light. The 2.5D isometric perspective allows for dense, visually layered environments while keeping production scope achievable for a small team.
+- 2.5D isometric perspective with full 3D character models and layered environments.
+- Clean visual hierarchy ensuring gameplay readability at MMO scale.
+
+<table>
+<tr>
+<td width="50%"><img src="../images/88image.png" width="100%"/></td>
+<td width="50%"><img src="../images/55image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Giant turtle dungeon entrance — Environment art</em></td>
+<td><em>World map — Full continent overview</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/980image.png" width="100%"/></td>
+<td width="50%"><img src="../images/77image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Library interior — Detailed environment</em></td>
+<td><em>Catacumba dungeon — Level design</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/Sin_titulo-3.png" width="100%"/></td>
+<td width="50%"><img src="../images/177image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>NPC portrait — Character art style</em></td>
+<td><em>Dwarf scholar — Concept art</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/craiyon_094057_image.png" width="100%"/></td>
+<td width="50%"><img src="../images/craiyon_143728_image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Orc blacksmith — NPC concept</em></td>
+<td><em>Orc merchant — NPC concept</em></td>
+</tr>
+</table>
 
 ### Influences
 
-- **Argentum Online** — For its classic top-down isometric MMO feel, community-driven world, and proven appeal in the Latin American market. The founder led its open-source development and Steam release.
-- **Albion Online** — For its clean isometric art style and how it balances visual clarity with rich world detail at MMO scale.
-
-### Character and Environment Design
-
-- Characters use a detailed isometric sprite style with fluid animations, drawing on the tradition of classic top-down MMOs like Argentum Online and Ragnarok Online while pushing visual fidelity with modern 2D rendering techniques.
-- Environments feature diverse biomes with varied flora, geological features, and atmospheric detail — forests, caves, volcanic terrain, coastlines, and open plains.
-- Architecture in settlements blends functional frontier aesthetics with varied cultural motifs.
-
-### UI
-
-- Clean, minimal HUD that doesn't obscure the world.
-- Map interface inspired by hand-drawn cartography.
-- Inventory and crafting UI designed for clarity and quick access.
-
-*Concept art and UI mockups will be included as supplementary material.*
+- **Argentum Online** — Classic top-down isometric MMO aesthetic, proven community appeal.
+- **Albion Online** — Clean isometric art balancing visual clarity with world detail.
+- **RuneScape** — Longevity through deep crafting, questing, and player-driven economy in an isometric format.
 
 ---
 
 ## 4. Sound Design
 
-### Music
+### Original Soundtrack
 
-- An orchestral and ambient soundtrack that shifts dynamically based on location, time of day, and combat state.
-- Draws on a diverse range of musical influences reflecting the game's global appeal — from the folk traditions of Argentina and the tango textures of Buenos Aires, to Eastern European orchestral styles inspired by Warsaw's classical scene, alongside Pacific and New Zealand ambient tones.
-- Calm, atmospheric tracks for exploration; percussive, rhythmic compositions for combat; warm, communal tones for settlement hubs.
+The team has original musical compositions already produced and ready to be remastered for Project Akaroa. This is not speculative — the music exists and has been composed specifically for this universe.
+
+The team has proven experience producing and releasing original game soundtracks commercially:
+
+**Reference:** [Argentum 20 Original Soundtrack on Steam](https://store.steampowered.com/app/2137450/Argentum_20_Original_Soundtrack/)
+
+The OST for Project Akaroa will:
+- Feature orchestral and ambient compositions that shift dynamically based on location, time of day, and combat state.
+- Draw on a wide range of genres — progressive, classical, rock, ambient, natural soundscapes — with the style shifting depending on the area and biome the player is in.
+- Include calm atmospheric tracks for exploration, percussive compositions for combat, and warm communal tones for settlement hubs.
 
 ### Sound Effects
 
-- Environmental audio is a priority: birdsong, wind through forests, volcanic rumbling, ocean surf.
-- Combat SFX designed to feel impactful without being overwhelming — clear audio feedback for hits, blocks, dodges, and skill activations.
-- Crafting and gathering have satisfying, tactile sound design.
-
-### Voice Acting
-
-- Key NPCs and quest-givers will have voiced dialogue, with a preference for New Zealand voice actors.
-- General NPCs use a bark system (short voiced lines) rather than full dialogue trees.
-- Player characters are not voiced.
-
-*Sample tracks and SFX references will be included as supplementary material.*
+- Environmental audio priority: native birdsong, wind, volcanic rumbling, ocean surf.
+- Impactful combat SFX with clear audio feedback for hits, blocks, dodges, and skill activations.
+- Satisfying tactile sound design for crafting and gathering.
 
 ---
 
-## 5. Production
+## 5. Localization
+
+Project Akaroa is designed from day one as a multilingual title targeting global audiences:
+
+| Language | Rationale |
+|---|---|
+| **English** | Primary market language, NZ base |
+| **Spanish** | Core audience — Latin American MMO community, founder's native language |
+| **Portuguese** | Brazilian gaming market, massive MMO audience |
+| **Te Reo Māori** | Cultural commitment to Aotearoa, unique differentiator |
+| **French** | European market expansion |
+| **Italian** | European market expansion |
+| **Chinese (Simplified)** | Largest gaming market globally |
+
+The game's text system is being built with localization as a core architecture decision, not a retrofit. All strings are externalized from code, UI layouts accommodate variable text lengths, and the team has native fluency in English and Spanish with professional translation planned for other languages.
+
+Te Reo Māori localization will be developed in consultation with appropriate cultural advisors to ensure accuracy and respect.
+
+---
+
+## 6. Production
 
 ### What the Grant Enables
 
-The $250,000 CODE Start Up grant will fund the development of Project Akaroa from its current prototype stage through to a playable vertical slice and early access preparation. Specifically, the grant covers:
+The $60,000 CODE KickStart grant will fund the development of Project Akaroa's prototype from its current early state to a functioning vertical slice that demonstrates the core gameplay loop and is ready to attract Start Up funding, publisher investment, or platform deals.
 
-- Core engineering: server infrastructure, netcode, and client development.
-- Content creation: environment art, character models, animations, and audio.
-- Game design iteration: combat tuning, progression balancing, and playtesting.
-- Marketing and community building: Steam page, social media presence, and early audience development.
-- Operational costs: tools, licenses, and essential services.
+The prototype already exists in basic form (Godot 4, tile-based movement, combat system, NPC interactions, chunk-streamed world). The grant enables dedicated full-time development to bring it to a "found the fun" state with:
+
+- Core combat and progression systems fully playable.
+- P2P trading prototype functional.
+- Faction system implemented.
+- One complete playable zone with final art direction.
+- Networking foundation for multiplayer testing.
+- Original soundtrack integrated.
+- Steam page live and wishlist building underway.
+
+### Technology Migration Context
+
+The path to Project Akaroa's current technology stack was not arbitrary — it was the result of years of experimentation:
+
+| Period | Experiment | Outcome |
+|---|---|---|
+| 2017–2019 | Argentum Online operations, VB6/legacy codebase | Deep understanding of MMO systems, community, economy |
+| 2020–2021 | Unity client + C++ server experiments | Validated real-time combat feel, identified Unity licensing concerns |
+| 2021–2022 | Rust server-side experiments | Validated performance for MMO-scale concurrent connections |
+| 2023–present | Godot 4 client + Rust/C++ server | Current stack — open source, performant, multiplatform |
+
+Every experiment informed the final architecture. The team is not learning how to build an MMO — the team has been building and operating one for nine years and is now migrating proven systems to modern technology.
+
+<table>
+<tr>
+<td width="50%"><img src="../images/22.png" width="100%"/></td>
+<td width="50%"><img src="../images/22image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>Map editor — Collision and tile system</em></td>
+<td><em>Zone information panel — Game tools</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="../images/44image.png" width="100%"/></td>
+<td width="50%"><img src="../images/777image.png" width="100%"/></td>
+</tr>
+<tr>
+<td><em>World editor — Town building tools</em></td>
+<td><em>Building asset — 3D to tile rendering</em></td>
+</tr>
+</table>
 
 ### High-Level Production Schedule
 
-The production timeline is 72 weeks (approximately 18 months), broken into four phases:
-
 | Phase | Duration | Key Milestones |
 |---|---|---|
-| **Phase 1: Foundation** | Weeks 1–16 | Server architecture, core movement/combat prototype, base environment toolkit, art pipeline established |
-| **Phase 2: Core Systems** | Weeks 17–36 | Crafting, inventory, NPC systems, quest framework, 2 playable zones, character progression, first playtest |
-| **Phase 3: Content and Polish** | Weeks 37–56 | 4+ zones complete, group content, settlement systems, sound integration, UI polish, closed beta |
-| **Phase 4: Launch Prep** | Weeks 57–72 | Open beta, server stress testing, marketing push, Steam Early Access preparation, bug fixing, optimisation |
+| **Phase 1: Core Loop** | Weeks 1–16 | Combat system complete, character progression, basic networking, art pipeline producing final assets |
+| **Phase 2: Systems** | Weeks 17–32 | P2P marketplace prototype, faction system, crafting, one complete zone, multiplayer testing |
+| **Phase 3: Polish & Validation** | Weeks 33–48 | Sound integration, UI polish, community playtesting via Battle Server model, Steam page live |
+| **Phase 4: Vertical Slice** | Weeks 49–52 | Final vertical slice build, documentation for Start Up / publisher pitch, wishlist campaign active |
 
-### Beyond the Grant Period
+### Validation Methodology
 
-The full development roadmap extends beyond the 72-week grant period. Post-grant, the studio plans to sustain development through:
+All features are validated before reaching the public through a proven two-stage process developed during AO operations:
 
-- Early Access revenue on Steam.
-- Publisher partnership (discussions to begin during Phase 3).
-- Ongoing personal investment from the founding team.
-- Potential follow-up CODE funding application based on demonstrated progress.
+1. **Battle Server** — A secondary server under Steam Betas where all new features are tested with a dedicated community of testers before going live. This model will be replicated for Project Akaroa.
+2. **Live Analytics** — Real-time player data tracking (reference: [AO Production Statistics](https://estadisticas.ao20.com.ar/produccion/)) informing design decisions with actual player behaviour data, not assumptions.
+
+This is not theoretical — this validation infrastructure exists and is actively used today.
 
 ### Risk Management
 
 | Risk | Likelihood | Mitigation |
 |---|---|---|
-| Scope creep (common in MMOs) | High | Strict MVP feature set defined upfront. Vertical slice first, then expand. Agile sprints with regular scope reviews. |
-| Server infrastructure costs | Medium | Self-hosted infrastructure during early development and testing phases to minimise costs. Transition to a hybrid model (self-hosted plus cloud services) as player numbers grow and demand requires scalable capacity. |
-| Team availability | Medium | Core work done by founder. Contractors engaged on fixed-scope deliverables with clear milestones. |
-| Technical complexity of netcode | Medium | Leverage Godot's built-in multiplayer API and ENet networking. Prototype netcode early in Phase 1. The founder's prior experience with online game networking (Argentum Online) reduces this risk. |
-| Cultural sensitivity | Low | Engage cultural consultants early. No use of taonga or sacred content without proper guidance and approval. |
+| Scope creep | High | KickStart scope is deliberately limited to core loop + one zone. Vertical slice only. |
+| Technical complexity | Low | All systems have been built before in AO. This is a migration, not invention. |
+| Art production bottleneck | Medium | Existing 3D asset library from AO accelerates production. Pipeline proven. |
+| Team availability | Low | Core work done by founder full-time. Contractors on fixed deliverables. |
+
+### Beyond the Grant Period
+
+The KickStart prototype positions Project Akaroa to pursue:
+
+- **CODE Start Up Grant** ($60K–$250K) for full production.
+- **Publisher partnerships** with a playable vertical slice as the pitch asset.
+- **Platform deals** (Xbox ID@Xbox, PlayStation Indies, Nintendo) with multiplatform Godot build.
+- **Steam Early Access revenue** once the game reaches sufficient content depth.
 
 ---
 
-## 6. Finances
+## 7. Finances
 
 ### Current Investment
 
-Conreco Limited has invested approximately $15,000 NZD in Project Akaroa to date, covering:
+Conreco Limited has invested approximately $15,000 NZD in Project Akaroa to date, covering prototype development, market research, and business planning.
 
-- Prototype development (engine setup, core mechanics, basic networking).
-- Market research and competitive analysis.
-- Concept art and early visual development.
-- Business planning and application preparation.
+Additionally, Lucas Recoaro has contributed nine years of consistent development time (since 2017) — weekends and weekday evenings — valued at approximately $900,000 NZD in-kind (based on a conservative $100,000 NZD per annum for a senior developer). This covers MMO architecture, netcode, server management, community systems, player economy design, technology migration experiments (Unity/C++, Rust, Godot), and live operations knowledge that directly informs Project Akaroa's design, with focused Project Akaroa rework since 2020.
 
-Additionally, Lucas Recoaro has contributed approximately 2,000 hours of unpaid development time valued at roughly $150,000 NZD in-kind. This includes direct prototype work on Project Akaroa as well as transferable R&D from nine years of developing and operating Argentum Online (since 2017) — covering MMO architecture, netcode, server management, community systems, player economy design, and live operations knowledge that directly informs Project Akaroa's design and technical approach.
-
-### Funding Plan to Launch
+### Funding Plan
 
 | Source | Amount | Status |
 |---|---|---|
-| CODE Start Up Grant | $250,000 | Applied |
-| Personal/team cash investment | $10,000 | Confirmed |
-| Steam Early Access revenue (projected) | $50,000–$150,000 | Projected (Phase 4+) |
-| Publisher advance (target) | $100,000–$300,000 | To be pursued in Phase 3 |
+| CODE KickStart Grant | $60,000 | Applied |
+| Personal cash investment | $5,000 | Confirmed |
+| **Total prototype budget** | **$65,000** | |
 
-The studio's strategy is to use the CODE grant to reach a compelling vertical slice and Early Access state, which then becomes the basis for publisher conversations and Early Access revenue. The team is realistic that publisher interest depends on demonstrable product quality and market traction.
+### Post-Prototype Funding Strategy
 
-### Production Spreadsheet Alignment
+| Source | Amount | Timeline |
+|---|---|---|
+| CODE Start Up Grant | $60K–$250K | Apply after KickStart completion |
+| Publisher advance | $100K–$300K | Pursue with vertical slice |
+| Steam Early Access revenue | $50K–$150K | Post-production launch |
 
-All costs in this document align with the accompanying Production Spreadsheet. The budget breakdown targets:
+At KickStart level, definitive answers on post-prototype funding are not expected, but the strategy is clear: use the vertical slice to demonstrate the product and attract production-level investment.
 
-- **Team costs:** ~$180,000 (engineering, art, design, audio — primarily NZ-based contractors and the founder)
-- **Additional service costs:** ~$45,000 (server hosting, playtesting services, marketing, cultural consultation)
-- **Assets and licenses:** ~$15,000 (Godot is free and open source — this covers third-party tools, plugins, audio libraries, and asset purchases)
-- **Other operational costs:** ~$10,000 (office, equipment, admin — noted as prohibited spend under CODE rules, funded separately)
+### Budget Breakdown
 
-At least 80% of CODE-funded expenditure will be within New Zealand, meeting the domestic spend requirement.
+| Category | CODE Funded (NZ) | CODE Funded (Overseas) | Self Funded | Total |
+|---|---|---|---|---|
+| Team Costs | $45,001 | $11,999 | $0 | $57,000 |
+| Additional Service Costs | $2,000 | $0 | $0 | $2,000 |
+| Assets and Licenses | $1,000 | $0 | $0 | $1,000 |
+| Other Costs (Prohibited) | $0 | $0 | $5,000 | $5,000 |
+| **Totals** | **$48,001** | **$11,999** | **$5,000** | **$65,000** |
+
+**Allowable expenditure (CODE funded):** $60,000
+**Overseas spend as % of CODE funding:** 19.99% (under 20% threshold)
 
 ---
 
-## 7. Go-to-Market
+## 8. Go-to-Market
+
+### Marketing Strategy: Argentum Online as Launchpad
+
+The single greatest marketing advantage Project Akaroa has is an existing, active community of MMO players who already play the game's spiritual predecessor. The marketing strategy leverages this directly:
+
+**Phase 1 — Wishlist Building (During KickStart)**
+- Steam page live with trailer and screenshots from the vertical slice.
+- Cross-promotion through Argentum Online's existing Steam presence and community channels.
+- Devlog series showing the technology migration journey — "from AO to Akaroa."
+- Discord community seeded from AO player base.
+- Target: 2,000+ wishlists by end of KickStart period.
+
+**Phase 2 — Content Creator Strategy (Post-KickStart)**
+- Outreach to MMO and indie game YouTubers/streamers with playable build.
+- Focus on Latin American content creators who cover the isometric MMO genre.
+- Behind-the-scenes content showing the 3D-to-2D art pipeline and AO heritage.
+
+**Phase 3 — Traditional Media & PR (Production Phase)**
+- NZ gaming media coverage (NZ-made MMO angle).
+- Latin American gaming press (AO successor angle).
+- International indie game press (unique P2P economy angle).
+
+**Pre-Release Strategy:**
+- Build hype through wishlist accumulation and community engagement.
+- Validate with community through Battle Server beta access.
+- Release when wishlist numbers and community feedback indicate readiness.
 
 ### Audience Analysis
 
-**Primary Audience: Mid-core MMO Players (25–40)**
-These players have deep experience with MMOs and are looking for a new world to sink into. They've likely played World of Warcraft, Guild Wars 2, Elder Scrolls Online, or Final Fantasy XIV. They value progression, social play, and world-building, and are drawn to games that offer a deep, engaging grind with meaningful rewards.
+**Primary: Latin American MMO Players**
+The largest and most directly reachable audience. Argentum Online has maintained active servers for 20+ years in this region. These players already understand and love the genre, the systems, and the gameplay loop. The founder's Argentine background and direct community access make this audience immediately reachable without paid acquisition.
 
-**Secondary Audience: Latin American MMO Players**
-Latin America has one of the most passionate and established MMO communities in the world, with titles like Argentum Online, Tibia, MU Online, and Ragnarok Online maintaining active player bases for over two decades. This audience values community, social interaction, and accessible gameplay over high-end graphics — a natural fit for Project Akaroa's isometric style and community-driven systems. The founder's Argentine background and track record shipping Argentum Online on Steam provide a direct channel to this market.
+**Secondary: Global Mid-core MMO Players**
+Players seeking a persistent world with genuine player-driven economy. The "no pay-to-win" positioning resonates strongly with this audience who are fatigued by monetisation-heavy MMOs.
 
-**Tertiary Audience: Exploration and Crafting Enthusiasts**
-Players who gravitate toward games like RuneScape, No Man's Sky, or Stardew Valley for their exploration and crafting loops, but who want a persistent shared world with deeper MMO social systems.
+**Tertiary: NZ/Pacific Gaming Community**
+A smaller but strategically important audience for CODE's mission. The NZ setting and Te Reo localization create a unique cultural identity that differentiates Project Akaroa globally.
 
-### Genre Understanding
+### Genre and Competitive Positioning
 
-The MMORPG market is dominated by established titles but has seen renewed interest through niche entries that offer a distinct identity:
-
-- **Path of Exile** (Grinding Gear Games, NZ) proved that a New Zealand studio can compete globally in the online RPG space.
-- **RuneScape** demonstrated that an isometric, browser-accessible MMO can build a massive, loyal player base over decades through deep crafting, questing, and community systems — proving the viability of the format Project Akaroa is pursuing.
-- **Albion Online** showed that a focused, systems-driven MMO can find a sustainable audience without AAA budgets.
-
-Project Akaroa's positioning is clear: a mid-scale MMORPG with a player-driven economy and no pay-to-win model, designed for players who want deep, engaging progression in a world that stands apart from the standard fantasy MMO landscape.
-
-### Competitive Analysis
-
-| Title | Similarity | Differentiation |
+| Title | Similarity | Project Akaroa's Differentiation |
 |---|---|---|
-| World of Warcraft | Core MMO loop | Akaroa is smaller-scale, isometric, P2P economy, no pay-to-win |
-| Guild Wars 2 | Horizontal progression, dynamic events | Akaroa has P2P trading economy, community building focus |
-| RuneScape | Isometric MMO, crafting, questing | Akaroa has real-time combat, modern engine, no pay-to-win |
-| Albion Online | Player-driven economy, PvP | Akaroa is PvE-focused with cooperative emphasis |
-| Path of Exile | NZ-made, online RPG | Akaroa is open-world MMO, not ARPG |
+| Argentum Online | Direct predecessor | Modern engine, 2.5D graphics, multiplatform, new world setting |
+| Albion Online | Player economy, isometric | PvE-focused, faction system, character trading |
+| RuneScape | Isometric MMO, crafting | Real-time combat, modern engine, no pay-to-win |
+| Path of Exile | NZ-made, online RPG | Open-world MMO, not ARPG, persistent world |
 
 ### Market Validation
 
-The strongest market validation for Project Akaroa comes from the founder's direct experience shipping and operating Argentum Online — a top-down isometric MMORPG that has maintained an active player base for over two decades across Latin America and was released on Steam under Conreco Limited's leadership. This provides:
+**Already achieved:**
+- Nine years operating a live MMO with active player base (AO since 2017).
+- Steam release and storefront presence for Argentum Online.
+- Real-time analytics dashboard tracking player behaviour ([estadisticas.ao20.com.ar/produccion](https://estadisticas.ao20.com.ar/produccion/)).
+- Active community providing continuous feedback on systems and features.
+- Battle Server validation model proving feature viability before public release.
 
-- **Proven demand for the format** — Argentum Online demonstrates that isometric, community-driven MMOs sustain long-term player engagement and retention. The game continues to have active servers and a dedicated community years after launch.
-- **Existing audience pipeline** — The Argentum Online community represents a direct channel to players who already enjoy the exact genre and format Project Akaroa is building in. These players are reachable through established community channels.
-- **Operational knowledge** — Running a live MMO has provided first-hand understanding of player behaviour, server management, community moderation, monetisation, and the ongoing content demands of the genre.
-- **Steam presence** — Argentum Online's Steam release provides an existing storefront presence and visibility within the MMO category.
-
-**Validation goals for the grant period:**
-- Steam page live for Project Akaroa by end of Phase 1.
-- 5,000+ Steam wishlists by end of Phase 2.
-- Discord community established and growing through cross-promotion with the Argentum Online community.
-- Closed beta with 200+ active testers in Phase 3.
-- At least 2 publisher conversations initiated by Phase 3.
-
-### Marketing Plan
-
-The marketing strategy is structured around building audience awareness incrementally, leveraging the founder's existing presence in the MMO community and the Argentum Online player base as a launchpad.
-
-**Pre-grant preparation (already underway):**
-- Social media accounts established for Project Akaroa (Twitter/X, Discord).
-- Initial outreach to the Argentum Online community to gauge interest and build early awareness.
-- Competitor and audience research completed to inform positioning and messaging.
-
-**Grant-period execution:**
-
-| Phase | Activity | Channels |
-|---|---|---|
-| Phase 1 (Weeks 1–16) | Steam page live, social media cadence begins, devlog series, Discord community seeded from Argentum Online player base | Steam, Twitter/X, Discord, YouTube |
-| Phase 2 (Weeks 17–36) | First trailer, press outreach to NZ and Latin American gaming media, community events, Reddit AMAs | Steam events, gaming press, Reddit, TikTok |
-| Phase 3 (Weeks 37–56) | Closed beta invites, content creator outreach (focus on MMO and indie game YouTubers/streamers), community growth campaigns | Twitch, YouTube, email newsletter |
-| Phase 4 (Weeks 57–72) | Open beta, launch trailer, PR campaign, Steam Early Access launch, paid user acquisition | All channels, paid UA (targeted), PR agency |
-
-**Key marketing principles:**
-- Lead with the P2P economy and no pay-to-win messaging — this is the strongest differentiator and resonates across all target audiences.
-- Use devlogs and behind-the-scenes content to build trust and transparency with the community.
-- Cross-promote through the existing Argentum Online community and Steam presence to bootstrap initial visibility.
-- Prioritise organic community growth over paid acquisition in early phases, shifting to paid UA closer to Early Access launch.
+**Planned during KickStart:**
+- Steam page live for Project Akaroa (wishlist tracking begins).
+- Discord community established with cross-promotion from AO.
+- First playtest events with AO community members.
+- Social media presence (Twitter/X, TikTok) with devlog content.
 
 ### Marketing Mentorship
 
-The team would welcome CODE's marketing mentorship support in the following areas:
-
-- Optimising Steam page conversion and wishlist strategy.
-- Identifying the right content creators and influencers for the MMO niche.
-- Refining paid user acquisition strategy for Early Access launch.
-- PR planning and timing for maximum impact around the Early Access announcement.
+The team would welcome CODE's marketing mentorship support in:
+- Optimising Steam page conversion and wishlist strategy for a new IP built on an existing community.
+- Identifying the right content creators for the isometric MMO niche across multiple regions.
+- Refining the "AO heritage" messaging to appeal to both existing fans and new players.
+- Planning the transition from KickStart prototype marketing to production-scale campaigns.
 
 ---
 
-## 8. Team
+## 9. Team
 
 ### Core Team
 
-**Lucas Recoaro — Founder, Lead Engineer, Project Director**
-Senior Software Engineer and Solutions Architect with 14+ years of experience across cloud engineering, full-stack development, and system architecture. Previously released Argentum Online on Steam (an online RPG), worked at Noland Studios integrating game engines with cloud backends, and has deep experience with .NET, C++, Node.js, React, and cloud infrastructure (AWS, Azure, GCP). Lucas brings both the technical capability to build an MMO's backend and client, and the production experience to manage the project.
+**Lucas Recoaro — Founder, Engineer, Project Director**
+Senior Software Engineer and Solutions Architect with 14+ years of experience across cloud engineering, full-stack development, and system architecture. Has operated Argentum Online since 2017, released it on Steam, and has been working on the technology migration and rework since 2020. Previously worked at Noland Studios integrating game engines with cloud backends. Deep experience with .NET, C++, Rust, GDScript, Node.js, and cloud infrastructure (AWS, Azure, GCP). Conreco Limited has delivered solutions for clients including BurgerFuel, IAG, and TVNZ.
 
 *Full CV included as supplementary material.*
 
@@ -331,45 +712,42 @@ Senior Software Engineer and Solutions Architect with 14+ years of experience ac
 |---|---|---|---|
 | Environment Artist (2D/2.5D) | Identified, to be contracted | Argentina | CODE grant |
 | Character Artist / Animator | Identified, to be contracted | Argentina | CODE grant |
-| Sound Designer / Composer | Identified, to be contracted | NZ | CODE grant |
-| UI/UX Designer | To be recruited | NZ | CODE grant |
-| Backend Engineer (netcode) | Identified, to be contracted | NZ | CODE grant |
-
-All contractors have been identified and will be confirmed upon funding approval. Email addresses will be supplied as required.
+| Lead Developer | To be recruited | NZ | CODE grant |
+| Trainee / Junior Developer | To be recruited | NZ | CODE grant |
 
 ### Studio Goals
 
-Conreco Limited is an established New Zealand software consultancy that has delivered solutions for clients including BurgerFuel, IAG, and TVNZ. The studio also maintains Argentum Online on Steam alongside other third-party projects. Conreco is now expanding into original game development, leveraging its deep technical expertise, commercial track record, and live MMO operations experience. Project Akaroa is the studio's flagship original title, and the long-term vision is to grow the game development arm from a solo founder with contractors into a small, permanent team of 5–8 people sustained by game revenue — while continuing to operate as a broader technology company.
+Conreco Limited is an established New Zealand software consultancy expanding into original game development. The long-term vision is to grow from a solo founder with contractors into a sustainable game studio of 5–8 people, funded by game revenue. Project Akaroa is the flagship title, built on nine years of MMO operations experience and a proven community.
 
 ---
 
-## 9. Build
+## 10. Build
 
 A playable prototype of Project Akaroa is included with this application. The prototype demonstrates:
 
 - Core movement and camera controls (top-down isometric).
-- Basic combat system (attack, dodge, block) against AI enemies.
-- A single explorable zone showcasing the environmental art direction.
-- Basic networking: two players can connect and see each other in the world.
-- Placeholder UI for health, inventory, and minimap.
+- Real-time combat system (melee, ranged, spells) against AI enemies.
+- Spell casting with mana management and cooldowns.
+- NPC interactions and dialogue.
+- Chunk-streamed world with tile-based movement.
+- HUD with inventory, quest log, and hotkey bar.
+- Basic networking stub (multiplayer foundation).
 
 **Platform:** Windows (PC)
-**Engine:** Godot (open source)
+**Engine:** Godot 4.6 (open source)
 **Install instructions:** Included in the build package.
 
-The prototype is not representative of final visual quality — placeholder art and tiles are used in many areas. The purpose is to demonstrate the feel of isometric movement, combat, and the multiplayer foundation.
+The prototype uses placeholder art in many areas. The purpose is to demonstrate the feel of isometric movement, combat systems, and the technical foundation — not final visual quality. Final art direction is demonstrated through the existing 3D asset pipeline used in Argentum Online production.
 
 ---
 
-## 10. Supplementary Material
+## 11. Supplementary Material
 
 The following documents are included with this application:
 
 - Lucas Recoaro CV (1 page)
 - Production Spreadsheet (CODE template)
-- Concept art package (labelled — includes AI-generated concept art marked "concept only")
 - Prototype build (Windows PC)
-
----
-
-*Document prepared by Conreco Limited, April 2026.*
+- Argentum Online Steam page reference
+- Original Soundtrack Steam page reference
+- AO Production Statistics dashboard reference

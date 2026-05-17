@@ -1,0 +1,197 @@
+KickStart Fund
+(Range: $10,000 - $60,000)
+What is the outcome we’re looking for from KickStart Funding?
+To help Aotearoa New Zealand-based individuals and small teams wanting to create innovative, working
+game prototypes that have “found the fun”. The prototypes will have a functioning core gameplay loop
+ready to or be in the process of attracting further funding or external investment.
+Who might you be?
+You are talented, and have experience using software tools to make digital games. You might be: a
+graduate of a game-related vocational course in art, animation, audio or another relevant discipline with
+a portfolio showing this; a computer science graduate with a keen interest in games, or an experienced
+professional aiming to get seed funding to give you the breathing space to take a game from idea to
+prototype. You might even be an exceptional individual or team with titles on a digital platform such as
+itch.io but with no formal qualification in games.
+What are we definitely not looking for?
+Hobbyists making their first game or who make games in general as a pastime without any ambition to
+create a commercially saleable title, or, undergraduates working on course projects. Projects must have
+a commercial intent and are not solely for artistic expression. However, we do really welcome people into
+the game-making community to help them progress to the stage where applying for KickStart Funding is a
+realistic goal.
+Please read this document in conjunction with the CODE Funding Terms and Conditions.
+What Kinds of Projects Can I Apply For?
+• Games intended for global consumer audiences.
+• Serious & health-related games.
+• Educational games.
+• Narrative and non-narrative format games.
+• Free-to-play and premium games.
+• VR, AR, mobile, tablet, console, installation, PC and multi-platform games.
+CODE KickStart Funding Programme SUMMARY OF INFORMATION | Page 1
+CODE KICKSTART FUND
+SUMMARY OF INFORMATION
+What Kinds of Projects and Items Can I NOT Apply For?
+• Games which are not primarily digital in nature (hybrid digital/physical projects are allowed).
+• Gambling games.
+• Games of a pornographic nature.
+• Games for advertising purposes.
+• Commissioned products.
+• Games for internal training or corporate services.
+• The purchase of Intellectual Property rights.
+• The purchase of equipment and hardware, apart from console Developers’ Kits.
+• Esports proposals, or any project not directly involved in the creation of a game / video game
+production business.
+Further details on eligibility of projects are on page 4.
+How can I apply?
+The first stage of the application requires you to submit a simple Expression of Interest using this EOI
+Form. We will (1) assess these Expressions of Interest for suitability and eligibility, and (2) contact you if we
+need any clarifications. Then, we will select the submissions we would like to invite to progress to the Full
+Application stage.
+Those individuals or teams who are selected to proceed to Full Application will be able to access support
+from CODE staff to complete the application and associated documentation.
+How will my application be assessed?
+After a pre-submission consultation with one or more of CODE’s staff, you will submit your Full Application
+and associated documentation via a second online Form – we will supply a private link to this.
+This application will then be checked again for eligibility and submitted to a panel of experts drawn from a
+variety of senior roles in the region’s video game industry. The assessment panel process is competitive so
+a high quality of application is encouraged.
+CODE assessment panels are always drawn externally and CODE executive staff do not influence the
+decision process in any way.
+CODE KickStart Funding Programme SUMMARY OF INFORMATION | Page 2
+CODE KICKSTART FUND
+SUMMARY OF INFORMATION
+What criteria will be used by the assessment panel?
+Concept Appeal & General Objectives
+• The economic, cultural and creative benefits of the project to Aotearoa New Zealand;
+• The track record of the applicant(s) and principal(s). However, note that early career developers are
+encouraged to apply as long as they can demonstrate capability for project delivery;
+• The innovation, creative ambition, originality and quality of the project;
+• The quality and rigour of all supporting materials.
+Key Aspects: Creative Merit
+• Quality, innovation, creativity and vision of the project (including but not limited to Art & Animation,
+Game & Narrative Design, Sound Design, Technology, UX, or Programming) evidenced by game
+design documentation as detailed and/or gameplay demonstration;
+• The distinctiveness of the game within its genre and its ability to find an audience.
+Audience
+• Demonstrated and realistic understanding of the proposed audience of the game and/or market
+potential of the project;
+• Understanding and definition of the proposed pathways to audience;
+• Indication of potential end user, target audience, and marketplace interest from bona fide investors (if
+approached);
+Market Validation
+• Separate to the Audience understanding and segmentation, Market Validation is a new criterion to
+demonstrate the practical steps the developer is taking towards demonstrating the product is viable
+for sale.
+• At a KickStart level, we are not expecting to see any live evidence, however there needs to be a
+demonstration of understanding when this will commence, in what forms and we expect to see
+appropriate budget projections (E.G. for marketing or community management).
+• This can be any combination of planning for market validation via; social media, publisher or investor
+pathways (especially letters of interest or paper trails), Discord or Reddit community engagement,
+playtest events (either live or online) or any other form of proof that the product resonates with
+game audiences. If any of these vectors have already been engaged with, please supply proof in your
+application materials.
+Go-to-Market
+• A go-to-market plan demonstrating the potential of the project, including: target market, proposed
+platforms, any planned PR or user acquisition.
+• Demonstrable market attachment such as letters of intent or interest in publishing or from partners
+is advantageous. In some cases (especially where the customer is a business or organisation such as a
+district health board or school) this may be a specific requirement. If so, we will make that clear at the
+time of Full Application.
+CODE KickStart Funding Programme SUMMARY OF INFORMATION | Page 3
+CODE KICKSTART FUND
+SUMMARY OF INFORMATION
+Diversity and Inclusion
+• If elements of the product, story and/or team reflect gender equality and diversity of experience, is
+this handled in a respectful manner, including appropriate consultation with represented groups?
+(Includes sexuality, gender diversity, disability, ethnicity etc.)
+• Does the game demonstrate respect for Māori or Pasifika culture and heritage, including recognition
+of cultural and intellectual property rights, maintenance of integrity and respect for beliefs. Is there
+evidence of relevant and expert indigenous partnerships and consultation?
+• Does the project address accessibility, for example: configurable controls, variable difficulty levels,
+alternative sound settings, high visibility graphics, accessible menus and text displays, colour contrast
+and brightness (see http://gameaccessibilityguidelines.com).
+Finance, Budget and Schedules
+• Is the project viable in terms of whether it has distinctive appeal and a well-founded assessment of
+audience reach?
+• Is the game being prototyped of a commensurate scale which would enable the specific team to have
+a realistic chance of securing production funding?
+• Do the key creatives have the capability to deliver the prototype to the required standard to attract
+further funding?
+• Is the scope of the game realistic and achievable?
+• Is the budget realistic for the scope of the game?
+• Is the production schedule credible within the scope and milestones clearly articulated?
+All applications must include:
+• A completed Application Form
+• A detailed Project Proposal that uses our supplied templates, including:
+• Your Application Document that includes the Project’s content and clearly demonstrates that the
+project is ready for either prototyping or further production.
+• A Developer’s Statement outlining the objectives and creative vision of the Project.
+• A Functionality and/or Interactivity Overview, including details of how the gameplay unfolds across
+the specified platform/s and the user experience.
+• Any relevant scripts.
+• An Art section, including treatment, concept art, any screenshots etc.
+• A Production Schedule, with appropriate milestones and/or delivery dates.
+• Wireframes and/or prototyping if available.
+• Marketing overview, including:
+• Release plan
+• Details of the target audience
+• Strategies for obtaining intended audience reach
+• Strategies for obtaining audience reach, plus evidence of any and all market validation activities.
+CODE KickStart Funding Programme SUMMARY OF INFORMATION | Page 4
+CODE KICKSTART FUND
+SUMMARY OF INFORMATION
+All applications must include (contd.):
+• A full budget to completion of the prototype or release that also includes the Aotearoa New Zealand
+expenditure, via the Production Spreadsheet, including any sweat-equity (“in kind” commitment).
+• One-page CVs of the Key Creatives, demonstrating career highlights.
+Persons and Entities
+• CODE Funding Programmes are explicitly limited to Aotearoa New Zealand-based ventures.
+• The Principal applicant and majority of the team must be over 18 and based in Aotearoa New Zealand.
+• If Applicants are successful in securing CODE funding, they will need to set up a registered company if
+it does not already exist.
+• CODE’s focus is on economic development of video game developers in Aotearoa New Zealand, and a
+common-sense check will apply.
+• Project teams are explicitly encouraged to address issues of diversity and representation in our local
+game development industry.
+• CODE Funding Programmes are generally not available to students. No team or entity consisting
+entirely of undergraduate students may apply for funding, including solo projects. Students may
+participate in projects with the permission of their educational establishment and CODE itself.
+Location of workers or origin of contracted services
+• It is a CODE expectation that 80% of the grant monies will be spent in Aotearoa New Zealand.
+• Labour and services may be contracted outside of Aotearoa New Zealand, on the proviso that this
+does not take the overall grant expenditure outside the local area over the 20% limit.
+Projects
+• Funding is for digital, interactive game projects with commercial outcomes in mind. Kickstarter-
+level projects are expected to be pre-prototype. However, applicants will be expected to detail the
+commercial potential of their project in their applications.
+• Developers of serious or educational games are encouraged to apply. However, applications for such
+projects must demonstrate potential for commercialisation in order to be considered for funding.
+• Projects must be primarily digital in nature. Certain hybrid projects may be considered if digital
+interactivity forms the core of the product’s essential nature in an innovative way.
+• Applications are expected to consider accessibility for all audiences. Consider using http://
+gameaccessibilityguidelines.com for guidance.
+• Projects are permitted to be submitted for a maximum of two rounds. If the project has been
+unsuccessful after a second submission, it will require a radical redesign and strategic change before
+being eligible for another submission. This in no way prohibits a developer from making a third
+submission with a completely different project.
+CODE KickStart Funding Programme SUMMARY OF INFORMATION | Page 5
+CODE KICKSTART FUND
+SUMMARY OF INFORMATION
+Spending
+As a general rule, CODE Funding Programme funds can be spent on the majority of expenditure related to
+a project including:
+• Production costs: Payment to staff working on the project, whether full-time, part-time or contracted,
+with the proviso noted above about the location of these workers.
+• Additional mentorship or expert production consultancy, this being over and above the wraparound
+mentorship that may be provided by CODE at its discretion. This need not be locally sourced, though
+should be if possible.
+• Subscription-based software licenses required for the development of the project over the lifetime of
+the funding.
+• Assets purchased from a third-party for the project that are available commercially on the open
+market, not commissioned specifically for the project, unless within the allowable 20% spend outside
+Aotearoa New Zealand.
+Prohibited spending
+• Capital equipment: computers, permanent software licenses, furniture and so on.
+• Overheads: rent, utilities, cleaning, shared facilities.
+• Any non-project-related costs.
+CODE KICKSTART FUND
+SUMMARY OF INFORMATION
+nz-code.nz

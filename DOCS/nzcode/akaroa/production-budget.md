@@ -1,8 +1,8 @@
 # Project Akaroa — Production Budget Breakdown
 
-**Total CODE Funding Request:** $250,000 NZD
-**Grant Type:** Start Up
-**Duration:** 72 weeks
+**Total CODE Funding Request:** $60,000 NZD
+**Grant Type:** KickStart
+**Duration:** 52 weeks
 
 ---
 
@@ -10,76 +10,63 @@
 
 | Category | CODE Funded (NZ) | CODE Funded (Overseas) | Self Funded | Total |
 | --- | --- | --- | --- | --- |
-| Team Costs | $132,000 | $48,000 | $0 | $180,000 |
-| Additional Service Costs | $45,000 | $0 | $0 | $45,000 |
-| Assets and License Costs | $15,000 | $0 | $0 | $15,000 |
-| Other Costs (Prohibited) | $0 | $0 | $10,000 | $10,000 |
-| **Totals** | **$192,000** | **$48,000** | **$10,000** | **$250,000** |
+| Team Costs | $45,001 | $11,999 | $0 | $57,000 |
+| Additional Service Costs | $2,000 | $0 | $0 | $2,000 |
+| Assets and License Costs | $1,000 | $0 | $0 | $1,000 |
+| Other Costs (Prohibited) | $0 | $0 | $5,000 | $5,000 |
+| **Totals** | **$48,001** | **$11,999** | **$5,000** | **$65,000** |
 
-**Allowable expenditure (CODE funded):** $240,000
-**Overseas spend as % of CODE funding:** 20.00% (at 20% threshold)
-**Prohibited spend (self funded):** $10,000
-**Prohibited spend (self funded):** $10,000
+**Allowable expenditure (CODE funded):** $60,000
+**Overseas spend as % of CODE funding:** 19.99% (under 20% threshold)
+**Prohibited spend (self funded):** $5,000
 
 ---
 
-## Team Costs — $180,000
+## Team Costs — $57,000
 
 | Role | Person | Location | Weeks | Weekly Rate | Total | Funded By |
 | --- | --- | --- | --- | --- | --- | --- |
-| Lead Engineer / Project Director | Lucas Recoaro | Auckland, NZ | 72 | $1,195 | $86,000 | CODE (NZ) |
-| Environment Artist (2D/2.5D) | TBC | Argentina | 48 | $540 | $26,000 | CODE (Overseas) |
-| Character Artist / Animator | TBC | Argentina | 36 | $610 | $22,000 | CODE (Overseas) |
-| Backend Engineer (netcode) | TBC | NZ | 36 | $555 | $20,000 | CODE (NZ) |
-| Sound Designer / Composer | TBC | NZ | 30 | $500 | $15,000 | CODE (NZ) |
-| UI/UX Designer | TBC | NZ | 20 | $550 | $11,000 | CODE (NZ) |
-| **Subtotal NZ** | | | | | **$132,000** | |
-| **Subtotal Overseas** | | | | | **$48,000** | |
-| **Team Total** | | | | | **$180,000** | |
+| Engineer / Project Director | Lucas Recoaro | Auckland, NZ | 52 | $0 | $0 | In-kind |
+| Environment Artist (2D/2.5D) | TBC | Argentina | 20 | $400 | $8,000 | CODE (Overseas) |
+| Character Artist / Animator | TBC | Argentina | 10 | $400 | $3,999 | CODE (Overseas) |
+| Lead Developer | TBC | NZ | 52 | $827 | $43,001 | CODE (NZ) |
+| Trainee / Junior Developer | TBC | NZ | 5 | $400 | $2,000 | CODE (NZ) |
+| **Subtotal NZ** | | | | | **$45,001** | |
+| **Subtotal Overseas** | | | | | **$11,999** | |
+| **Team Total** | | | | | **$57,000** | |
 
-Adjust individual rates/weeks as needed.
-
-Note: If any team member is overseas, move their cost to the "CODE Funded (Overseas)" column. Keep total overseas under $48,000 (20% of $240,000).
+Note: If any team member is overseas, their cost goes to "CODE Funded (Overseas)" column. Total overseas kept under 20% of allowable expenditure.
 
 ---
 
-## Additional Service Costs — $45,000
+## Additional Service Costs — $2,000
 
 | Service | Location | Total | Funded By |
 | --- | --- | --- | --- |
-| Server hosting (self-hosted hardware + cloud hybrid) | NZ | $10,000 | CODE (NZ) |
-| Marketing and PR | NZ | $15,000 | CODE (NZ) |
-| Playtesting services | NZ | $10,000 | CODE (NZ) |
-| Cultural consultation | NZ | $3,000 | CODE (NZ) |
-| Legal and accounting | NZ | $3,000 | CODE (NZ) |
-| Community management tools and services | NZ | $4,000 | CODE (NZ) |
-| **Subtotal** | | **$45,000** | |
+| Server hosting (development/testing) | NZ | $2,000 | CODE (NZ) |
+| **Subtotal** | | **$2,000** | |
 
 ---
 
-## Assets and License Costs — $15,000
+## Assets and License Costs — $1,000
 
 | Item | Total | Notes |
 | --- | --- | --- |
 | Godot Engine | $0 | Free and open source |
-| Third-party plugins and tools | $3,000 | Networking, UI, analytics |
-| Audio libraries and SFX packs | $3,000 | Licensed music and sound assets |
-| Art asset purchases (tilesets, sprites) | $4,000 | Base assets to accelerate production |
-| Original music / OST production | $3,000 | Commissioned compositions |
-| Domain, SSL, web hosting | $2,000 | Website, community portal |
-| **Subtotal** | **$15,000** | |
+| Domain, SSL, web hosting | $1,000 | Website, community portal |
+| **Subtotal** | **$1,000** | |
 
 ---
 
-## Other Costs (Prohibited Spend) — $10,000
+## Other Costs (Prohibited Spend) — $5,000
 
-These costs are not eligible for CODE funding and are covered by personal/team investment.
+These costs are not eligible for CODE funding and are covered by personal investment.
 
 | Item | Total | Funded By |
 | --- | --- | --- |
-| Office / workspace costs | $6,000 | Personal cash ($6,100) |
-| Equipment (hardware, peripherals) | $4,000 | Personal cash |
-| **Subtotal** | **$10,000** | |
+| Equipment (hardware, peripherals) | $3,000 | Personal cash |
+| Office / workspace costs | $2,000 | Personal cash |
+| **Subtotal** | **$5,000** | |
 
 ---
 
@@ -87,9 +74,9 @@ These costs are not eligible for CODE funding and are covered by personal/team i
 
 | Source | Amount | Status | Evidence Required |
 | --- | --- | --- | --- |
-| CODE Start Up Grant | $240,000 | Applied | — |
-| Personal cash investment | $10,000 | Confirmed | Bank statement |
-| **Total** | **$250,000** | | |
+| CODE KickStart Grant | $60,000 | Applied | — |
+| Personal cash investment | $5,000 | Confirmed | Bank statement |
+| **Total** | **$65,000** | | |
 
 **Contingency reserve:** None — personal cash covers prohibited spend exactly.
 
@@ -104,6 +91,6 @@ When entering into the CODE Production Spreadsheet tabs:
 3. **Assets and License costs tab** — Enter each item
 4. **Other costs tab** — Enter office and equipment (these show as prohibited spend)
 5. **Summary tab** — Should auto-calculate. Check that:
-   - Allowable expenditure shows ~$240,000
+   - Allowable expenditure shows $60,000
    - Overseas % shows under 20%
    - Status flips to green
