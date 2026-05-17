@@ -1,11 +1,5 @@
 # Project Akaroa, Main Application Document
 
-**Applicant:** Conreco Limited
-**Primary Contact:** Lucas Recoaro, lucas.recoaro@gmail.com
-**Funding Type:** CODE KickStart Grant
-**Funding Requested:** $60,000 NZD
-**Project Codename:** Project Akaroa
-
 ---
 
 ## 1. Introduction
