@@ -2,7 +2,7 @@
 
 **Total CODE Funding Request:** $60,000 NZD
 **Grant Type:** KickStart
-**Duration:** 52 weeks
+**Duration:** 72 weeks
 
 ---
 
@@ -26,10 +26,10 @@
 
 | Role | Person | Location | Weeks | Weekly Rate | Total | Funded By |
 | --- | --- | --- | --- | --- | --- | --- |
-| Engineer / Project Director | Lucas Recoaro | Auckland, NZ | 52 | $0 | $0 | In-kind |
+| Engineer / Project Director | Lucas Recoaro | Auckland, NZ | 72 | $0 | $0 | In-kind |
 | Environment Artist (2D/2.5D) | TBC | Argentina | 20 | $400 | $8,000 | CODE (Overseas) |
 | Character Artist / Animator | TBC | Argentina | 10 | $400 | $3,999 | CODE (Overseas) |
-| Lead Developer | TBC | NZ | 52 | $827 | $43,001 | CODE (NZ) |
+| Lead Developer | TBC | NZ | 72 | $597 | $43,001 | CODE (NZ) |
 | Trainee / Junior Developer | TBC | NZ | 5 | $400 | $2,000 | CODE (NZ) |
 | **Subtotal NZ** | | | | | **$45,001** | |
 | **Subtotal Overseas** | | | | | **$11,999** | |

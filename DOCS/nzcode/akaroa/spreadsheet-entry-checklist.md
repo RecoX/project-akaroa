@@ -4,7 +4,7 @@ Step-by-step instructions for filling out the CODE Production Spreadsheet.
 Based on `spreadsheet-answers.md`, `production-budget.md`, and `readme.md`.
 
 **Grant type:** KickStart ($60,000)
-**Duration:** 52 weeks
+**Duration:** 72 weeks
 **Team:** 5 members (1 founder + 2 overseas contractors + 1 lead dev + 1 trainee)
 
 **Important rules:**
@@ -24,58 +24,58 @@ Delete example names. Enter:
 
 | Row | Name (Column B) | Role (Column C) | Total Hours (Column D) |
 |-----|-----------------|-----------------|------------------------|
-| 5 | Lucas Recoaro | Engineer / Project Director | 2,080 |
+| 5 | Lucas Recoaro | Engineer / Project Director | 2,880 |
 | 6 | TBC Environment Artist | Environment Art (2D/2.5D) | 800 |
 | 7 | TBC Character Artist | Character Art / Animation | 400 |
-| 8 | TBC Lead Developer | Lead Developer | 2,080 |
+| 8 | TBC Lead Developer | Lead Developer | 2,880 |
 | 9 | TBC Trainee | Trainee / Junior Developer | 200 |
 
 Leave rows 10–34 empty.
 
 **Hours logic:**
-- Lucas: 52 weeks × 40 hrs/wk = 2,080
+- Lucas: 72 weeks × 40 hrs/wk = 2,880
 - Environment Artist: 20 weeks × 40 hrs/wk = 800
 - Character Artist: 10 weeks × 40 hrs/wk = 400
-- Lead Developer: 52 weeks × 40 hrs/wk = 2,080
+- Lead Developer: 72 weeks × 40 hrs/wk = 2,880
 - Trainee: 5 weeks × 40 hrs/wk = 200
 
 ### Step 1.2 — Replace the Task List (Row 40 onwards)
 
 Delete all example tasks. Enter:
 
-**Phase 1: Core Loop (Weeks 1–16)**
+**Phase 1: Core Loop (Weeks 1–20)**
 
 | Row | Task | Responsible | Hours |
 |-----|------|-------------|-------|
 | 40 | Project planning, architecture, Steam page setup | Lucas Recoaro | 200 |
-| 41 | Core combat and movement systems (Godot 4) | Lucas Recoaro | 440 |
+| 41 | Core combat and movement systems (Godot 4) | Lucas Recoaro | 600 |
 | 42 | Base environment tileset and art pipeline | TBC Environment Artist | 400 |
 | 43 | Character sprites — base archetypes, idle/walk/combat | TBC Character Artist | 200 |
-| 44 | Core systems development, networking foundation | TBC Lead Developer | 640 |
+| 44 | Core systems development, networking foundation | TBC Lead Developer | 800 |
 
-**Phase 2: Systems (Weeks 17–32)**
+**Phase 2: Systems (Weeks 21–44)**
 
 | Row | Task | Responsible | Hours |
 |-----|------|-------------|-------|
-| 45 | P2P marketplace prototype, faction system, crafting | Lucas Recoaro | 640 |
+| 45 | P2P marketplace prototype, faction system, crafting | Lucas Recoaro | 960 |
 | 46 | One complete playable zone — environment art | TBC Environment Artist | 400 |
 | 47 | Additional character sets, NPC sprites | TBC Character Artist | 200 |
-| 48 | Multiplayer systems, server architecture | TBC Lead Developer | 640 |
+| 48 | Multiplayer systems, server architecture | TBC Lead Developer | 960 |
 | 49 | Assisted development tasks, QA, documentation | TBC Trainee | 200 |
 
-**Phase 3: Polish & Validation (Weeks 33–48)**
+**Phase 3: Polish & Validation (Weeks 45–64)**
 
 | Row | Task | Responsible | Hours |
 |-----|------|-------------|-------|
-| 50 | Sound integration, UI polish, community playtesting | Lucas Recoaro | 640 |
-| 51 | Systems polish, performance, bug fixing | TBC Lead Developer | 640 |
+| 50 | Sound integration, UI polish, community playtesting | Lucas Recoaro | 800 |
+| 51 | Systems polish, performance, bug fixing | TBC Lead Developer | 800 |
 
-**Phase 4: Vertical Slice (Weeks 49–52)**
+**Phase 4: Vertical Slice (Weeks 65–72)**
 
 | Row | Task | Responsible | Hours |
 |-----|------|-------------|-------|
-| 52 | Final vertical slice build, documentation, wishlist campaign | Lucas Recoaro | 160 |
-| 53 | Final integration, deployment, QA | TBC Lead Developer | 160 |
+| 52 | Final vertical slice build, documentation, wishlist campaign | Lucas Recoaro | 320 |
+| 53 | Final integration, deployment, QA | TBC Lead Developer | 320 |
 
 Leave rows 54+ empty.
 
@@ -83,10 +83,10 @@ Leave rows 54+ empty.
 
 | Team Member | Total Hours | Check |
 |-------------|-------------|-------|
-| Lucas Recoaro | 2,080 | 200 + 440 + 640 + 640 + 160 = 2,080 ✓ |
+| Lucas Recoaro | 2,880 | 200 + 600 + 960 + 800 + 320 = 2,880 ✓ |
 | TBC Environment Artist | 800 | 400 + 400 = 800 ✓ |
 | TBC Character Artist | 400 | 200 + 200 = 400 ✓ |
-| TBC Lead Developer | 2,080 | 640 + 640 + 640 + 160 = 2,080 ✓ |
+| TBC Lead Developer | 2,880 | 800 + 960 + 800 + 320 = 2,880 ✓ |
 | TBC Trainee | 200 | 200 = 200 ✓ |
 
 ---
@@ -97,59 +97,57 @@ Names and Roles auto-populate from Production Schedule. Only fill the **pink/pur
 
 ### Step 2.1 — Enter Values
 
-**Row 5 — Lucas Recoaro** (Engineer / Project Director)
+**Row 5 — Lucas Recoaro #1** (Engineer / Project Director — prior work, in-kind)
 
 | C (NZ?) | D (Equity?) | E (Paid?) | F (CODE?) | H (Rate) | I (Hrs/Wk) |
 |---------|-------------|-----------|-----------|----------|-------------|
-| Y | Y | N | N | $48.08 | 40 |
+| Y | Y | N | N | $125.00 | 40 |
 
-→ Not paid from CODE. In-kind only ($900,000 prior work).
+→ Not paid. In-kind only. Assign task "Prior development — AO operations 2017–2025" with 7,200 hours in Production Schedule. Result: $125 × 7,200 = $900,000 in-kind.
 
-**Row 6 — TBC Environment Artist** (Environment Art)
+**Row 6 — Lucas Recoaro #2** (Engineer / Project Director — current project, in-kind)
+
+| C (NZ?) | D (Equity?) | E (Paid?) | F (CODE?) | H (Rate) | I (Hrs/Wk) |
+|---------|-------------|-----------|-----------|----------|-------------|
+| Y | Y | N | N | $64.10 | 20 |
+
+→ Not paid. In-kind. Assign tasks totalling 1,440 hours across the 72-week project.
+
+**Row 7 — TBC Environment Artist** (Environment Art)
 
 | C (NZ?) | D (Equity?) | E (Paid?) | F (CODE?) | H (Rate) | I (Hrs/Wk) |
 |---------|-------------|-----------|-----------|----------|-------------|
 | N | N | Y | Y | $10.00 | 40 |
 
-→ 20 weeks × 40 hrs × $10.00 = $8,000 Overseas spend
+→ 800 hours of tasks. Auto-calculates to 20 weeks. $10 × 800 = $8,000 Overseas.
 
-**Row 7 — TBC Character Artist** (Character Art / Animation)
+**Row 8 — TBC Character Artist** (Character Art / Animation)
 
 | C (NZ?) | D (Equity?) | E (Paid?) | F (CODE?) | H (Rate) | I (Hrs/Wk) |
 |---------|-------------|-----------|-----------|----------|-------------|
 | N | N | Y | Y | $10.00 | 40 |
 
-→ 10 weeks × 40 hrs × $10.00 = $4,000 Overseas spend. **Note:** Enter $9.998 to get $3,999 if the spreadsheet rounds up.
+→ 400 hours of tasks. Auto-calculates to 10 weeks. $10 × 400 = $4,000 Overseas. **Note:** To get exactly $3,999, enter $9.998/hr or reduce task hours to 399.
 
-**Row 8 — TBC Lead Developer** (Lead Developer)
+**Row 9 — TBC Lead Developer** (Lead Developer)
 
 | C (NZ?) | D (Equity?) | E (Paid?) | F (CODE?) | H (Rate) | I (Hrs/Wk) |
 |---------|-------------|-----------|-----------|----------|-------------|
-| Y | N | Y | Y | $20.67 | 40 |
+| Y | N | Y | Y | $14.93 | 40 |
 
-→ 52 weeks × 40 hrs × $20.67 = $43,001 NZ spend
+→ 2,880 hours of tasks. Auto-calculates to 72 weeks. $14.93 × 2,880 = $43,001 NZ.
 
-**Row 9 — TBC Trainee** (Trainee / Junior Developer)
+**Row 10 — TBC Trainee** (Trainee / Junior Developer)
 
 | C (NZ?) | D (Equity?) | E (Paid?) | F (CODE?) | H (Rate) | I (Hrs/Wk) |
 |---------|-------------|-----------|-----------|----------|-------------|
 | Y | N | Y | Y | $10.00 | 40 |
 
-→ 5 weeks × 40 hrs × $10.00 = $2,000 NZ spend
+→ 200 hours of tasks. Auto-calculates to 5 weeks. $10 × 200 = $2,000 NZ.
 
 Clear rows 10–34.
 
-### Step 2.2 — In-Kind Entry
-
-If the spreadsheet has a separate in-kind section or row, add:
-
-| Person | Role | In-Kind Value | Basis |
-|--------|------|---------------|-------|
-| Lucas Recoaro | Engineer (prior work, 2017–2025) | $900,000 | 9 years × $100,000/yr |
-
-If it's a column on the same row, enter $900,000 in the in-kind column for Lucas's row. If the spreadsheet doesn't support this on a paid row, add a second unpaid row for Lucas with equity=Y, paid=N, rate=$48.08, hrs/wk=40 (this calculates the in-kind automatically from hours).
-
-### Step 2.3 — Verify Totals
+### Step 2.2 — Verify Totals
 
 - NZ spend (CODE): $45,001
 - Overseas spend (CODE): $11,999

@@ -13,7 +13,7 @@ Ready-to-copy values for each tab in the CODE Production Spreadsheet.
 | Team or Company | Conreco Limited |
 | Project Name / Codename | Project Akaroa |
 | CODE Funding application type | KickStart |
-| Best estimate of weeks to complete | 52 |
+| Best estimate of weeks to complete | 72 |
 | Please enter here any cash funding from you / your team | $15,000.00 |
 | Please enter here any additional external investment you have secured | $0 |
 
@@ -28,21 +28,27 @@ The following fields auto-calculate from the other tabs — do not enter manuall
 
 ## Team Costs Tab
 
-Enter each row as a separate team member. The spreadsheet has columns for NZ spend and overseas spend.
+Enter each row as a separate team member. Match the columns exactly as shown in the spreadsheet.
 
-| Role | Person | Location | Weeks | Weekly Rate | NZ Spend (CODE) | Overseas Spend (CODE) | In Kind |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Engineer / Project Director (prior work) | Lucas Recoaro | Auckland, NZ | 9 years | $100,000/yr | $0 | $0 | $900,000 |
-| Engineer / Project Director | Lucas Recoaro | Auckland, NZ | 52 | $0 | $0 | $0 | $0 |
-| Environment Artist (2D/2.5D) | TBC | Argentina | 20 | $400 | $0 | $8,000 | $0 |
-| Character Artist / Animator | TBC | Argentina | 10 | $400 | $0 | $3,999 | $0 |
-| Lead Developer | TBC | NZ | 52 | $827 | $43,001 | $0 | $0 |
-| Trainee / Junior Developer | TBC | NZ | 5 | $400 | $2,000 | $0 | $0 |
+| # | Name (A) | Role (B) | Based in NZ? (C) | Equity Stake? (D) | Paid? (E) | Paid from CODE? (F) | Check (G) | Hourly Rate (H) | Hours/Week (I) | Weeks (J) | Total Hours |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 5 | Lucas Recoaro #1 | Engineer / Project Director (prior work) | Y | Y | N | N | OK | $125.00 | 40 | *auto* | 7,200 |
+| 6 | Lucas Recoaro #2 | Engineer / Project Director | Y | Y | N | N | OK | $64.10 | 20 | *auto* | 1,440 |
+| 7 | TBC Environment Artist | Environment Artist (2D/2.5D) | N | N | Y | Y | OK | $10.00 | 40 | *auto* | 800 |
+| 8 | TBC Character Artist | Character Artist / Animator | N | N | Y | Y | OK | $10.00 | 40 | *auto* | 400 |
+| 9 | TBC Lead Developer | Lead Developer | Y | N | Y | Y | OK | $14.93 | 40 | *auto* | 2,880 |
+| 10 | TBC Trainee | Trainee / Junior Developer | Y | N | Y | Y | OK | $10.00 | 40 | *auto* | 200 |
+
+**Notes:**
+- Weeks (J) auto-calculates from Production Schedule tasks: Total Hours ÷ Hours/Week
+- Lucas #1 in-kind: $125/hr × 7,200 hrs = $900,000 (assign one task "Prior development — AO operations 2017–2025" with 7,200 hours)
+- Lucas #2 in-kind: $64.10/hr × 1,440 hrs = $92,304 (current project work during grant period)
+- Best estimate of completion: 72 weeks (entered separately in row 41)
 
 **Team Costs Totals:**
-- NZ spend: $45,001
-- Overseas spend: $11,999
-- In kind: $900,000
+- NZ spend (CODE): $45,001 (Lead Dev $43,001 + Trainee $2,000)
+- Overseas spend (CODE): $11,999 (Env Artist $8,000 + Char Artist $3,999)
+- In kind: $900,000 (Lucas #1 prior work)
 - Total: $957,000
 
 ---
@@ -116,7 +122,7 @@ These are the fields the Summary tab says to copy back:
 | Cash funding from you / your team | $15,000 |
 | Funding from any other sources | $0 |
 | Total budget | $75,000 |
-| Best estimate of weeks to complete | 52 |
+| Best estimate of weeks to complete | 72 |
 
 ---
 
