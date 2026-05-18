@@ -642,9 +642,9 @@ Additionally, Lucas Recoaro has contributed nine years of consistent development
 
 | Source | Amount | Status |
 |---|---|---|
-| CODE KickStart Grant | $60,000 | Applied |
-| Personal cash investment | $15,000 | Confirmed |
-| **Total prototype budget** | **$75,000** | |
+| CODE KickStart Grant | $59,999 | Applied |
+| Personal cash (contingency) | $15,000 | Confirmed |
+| **Total prototype budget** | **$74,999** | |
 
 ### Post-Prototype Funding Strategy
 
@@ -660,14 +660,15 @@ At KickStart level, definitive answers on post-prototype funding are not expecte
 
 | Category | CODE Funded (NZ) | CODE Funded (Overseas) | Self Funded | Total |
 |---|---|---|---|---|
-| Team Costs | $45,001 | $11,999 | $0 | $57,000 |
-| Additional Service Costs | $2,000 | $0 | $0 | $2,000 |
-| Assets and Licenses | $1,000 | $0 | $0 | $1,000 |
-| Other Costs (Prohibited) | $0 | $0 | $15,000 | $15,000 |
-| **Totals** | **$48,001** | **$11,999** | **$15,000** | **$75,000** |
+| Team Costs | $48,015 | $11,984 | $0 | $59,999 |
+| Additional Service Costs | $0 | $0 | $0 | $0 |
+| Assets and Licenses | $0 | $0 | $0 | $0 |
+| Other Costs (Prohibited) | $0 | $0 | $6,999.60 | $6,999.60 |
+| **Totals** | **$48,015** | **$11,984** | **$6,999.60** | **$66,998.60** |
 
-**Allowable expenditure (CODE funded):** $60,000
-**Overseas spend as % of CODE funding:** 19.99% (under 20% threshold)
+**Allowable expenditure (CODE funded):** $59,999
+**Overseas spend as % of CODE funding:** 19.97% (under 20% threshold)
+**Personal cash (contingency reserve):** $15,000
 
 ---
 
